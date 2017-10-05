@@ -5,7 +5,7 @@ import SideMenu from 'react-native-side-menu'
 import Header from './src/components/Header'
 import Menu from './src/components/Menu'
 
-export default class App extends Component {
+class App extends Component {
   constructor(props){
   	super(props)
   	this.state = {
@@ -44,6 +44,8 @@ const styles = StyleSheet.create({
   }
 
 })
+
+export default App
 
 // skip this line if using Create React Native App
 AppRegistry.registerComponent('BibliotecaMovil', () => App);

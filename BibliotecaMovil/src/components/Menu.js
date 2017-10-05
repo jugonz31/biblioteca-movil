@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 const {width, height} = Dimensions.get('window')
 
-export default class Menu extends Component{
+class Menu extends Component{
 	render(){
 		return(
 			<View style = {styles.menu}>
@@ -183,3 +183,5 @@ const styles = StyleSheet.create({
 		marginTop: 5
 	}
 })
+
+export default Menu
