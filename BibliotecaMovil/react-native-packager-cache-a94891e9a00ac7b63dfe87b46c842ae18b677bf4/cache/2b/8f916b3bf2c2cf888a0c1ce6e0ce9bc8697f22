@@ -1,0 +1,150 @@
+var _jsxFileName = '/home/stiven/BibliotecaMovil/App.js';
+
+var _reactNative = require('react-native');
+
+var _reactNative2 = babelHelpers.interopRequireDefault(_reactNative);
+
+var _reactNativeMenu = require('react-native-menu');
+
+var _reactNativeMenu2 = babelHelpers.interopRequireDefault(_reactNativeMenu);
+
+var App = function App() {
+  return _reactNative2.default.createElement(
+    _reactNativeMenu.MenuContext,
+    { style: { flex: 1 }, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      }
+    },
+    _reactNative2.default.createElement(TopNavigation, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      }
+    }),
+    _reactNative2.default.createElement(
+      _reactNative.View,
+      { style: { flex: 1, justifyContent: 'center', alignItems: 'center' }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        }
+      },
+      _reactNative2.default.createElement(
+        _reactNative.Text,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9
+          }
+        },
+        'Hello!'
+      )
+    )
+  );
+};
+
+var TopNavigation = function TopNavigation() {
+  return _reactNative2.default.createElement(
+    _reactNative.View,
+    { style: { padding: 10, flexDirection: 'row', backgroundColor: 'pink' }, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      }
+    },
+    _reactNative2.default.createElement(
+      _reactNative.View,
+      { style: { flex: 1 }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        }
+      },
+      _reactNative2.default.createElement(
+        _reactNative.Text,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15
+          }
+        },
+        'My App'
+      )
+    ),
+    _reactNative2.default.createElement(
+      _reactNativeMenu2.default,
+      { onSelect: function onSelect(value) {
+          return alert('User selected the number ' + value);
+        }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        }
+      },
+      _reactNative2.default.createElement(
+        _reactNativeMenu.MenuTrigger,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17
+          }
+        },
+        _reactNative2.default.createElement(
+          _reactNative.Text,
+          { style: { fontSize: 20 }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            }
+          },
+          '\u22EE'
+        )
+      ),
+      _reactNative2.default.createElement(
+        _reactNativeMenu.MenuOptions,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20
+          }
+        },
+        _reactNative2.default.createElement(
+          _reactNativeMenu.MenuOption,
+          { value: 1, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 21
+            }
+          },
+          _reactNative2.default.createElement(
+            _reactNative.Text,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 22
+              }
+            },
+            'One'
+          )
+        ),
+        _reactNative2.default.createElement(
+          _reactNativeMenu.MenuOption,
+          { value: 2, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 24
+            }
+          },
+          _reactNative2.default.createElement(
+            _reactNative.Text,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 25
+              }
+            },
+            'Two'
+          )
+        )
+      )
+    )
+  );
+};
+
+_reactNative.AppRegistry.registerComponent('Example', function () {
+  return App;
+});
