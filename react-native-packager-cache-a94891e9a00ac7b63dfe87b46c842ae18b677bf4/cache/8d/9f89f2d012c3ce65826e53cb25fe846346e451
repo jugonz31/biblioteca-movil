@@ -1,0 +1,155 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+var _jsxFileName = '/home/stiven/BibliotecaMovil/node_modules/expo/src/Modal/ModalImplementation.js';
+
+var _react = require('react');
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var ModalImplementation = function (_Component) {
+  babelHelpers.inherits(ModalImplementation, _Component);
+
+  function ModalImplementation(props) {
+    babelHelpers.classCallCheck(this, ModalImplementation);
+
+    var _this = babelHelpers.possibleConstructorReturn(this, (ModalImplementation.__proto__ || Object.getPrototypeOf(ModalImplementation)).call(this, props));
+
+    _this._handleHardwareBack = function () {
+      if (_this.props.onRequestClose && _this.props.visible) {
+        _this.props.onRequestClose();
+        return true;
+      }
+      return false;
+    };
+
+    _this.state = {
+      visible: new _reactNative.Animated.Value(props.visible ? 1 : 0),
+      rendered: props.visible
+    };
+    return _this;
+  }
+
+  babelHelpers.createClass(ModalImplementation, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _reactNative.BackHandler.addEventListener('hardwareBackPress', this._handleHardwareBack);
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      var _this2 = this;
+
+      if (this.props.visible !== nextProps.visible) {
+        if (nextProps.animationType === 'none') {
+          this.setState({ rendered: nextProps.visible });
+        } else {
+          if (nextProps.visible) {
+            this.setState({
+              rendered: true
+            }, function () {
+              return _reactNative.Animated.timing(_this2.state.visible, {
+                toValue: 1,
+                duration: 300,
+                easing: _reactNative.Easing.quad,
+                useNativeDriver: true
+              }).start(nextProps.onShow);
+            });
+          } else {
+            _reactNative.Animated.timing(this.state.visible, {
+              toValue: 0,
+              duration: 250,
+              easing: _reactNative.Easing.quad,
+              useNativeDriver: true
+            }).start(function (finished) {
+              if (finished) {
+                _this2.setState({
+                  rendered: false
+                });
+              }
+            });
+          }
+        }
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      _reactNative.BackHandler.removeEventListener('hardwareBackPress', this._handleHardwareBack);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          animationType = _props.animationType,
+          transparent = _props.transparent,
+          layout = _props.layout;
+      var _state = this.state,
+          visible = _state.visible,
+          rendered = _state.rendered;
+
+
+      if (!rendered) {
+        return null;
+      }
+
+      var opacity = animationType === 'fade' ? visible : 1;
+      var translate = animationType === 'slide' ? visible.interpolate({
+        inputRange: [0, 1],
+        outputRange: [layout.height, 0]
+      }) : 0;
+
+      return _react2.default.createElement(
+        _reactNative.View,
+        { style: styles.container, pointerEvents: visible ? 'auto' : 'none', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 108
+          }
+        },
+        transparent ? null : _react2.default.createElement(_reactNative.Animated.View, {
+          style: [styles.backdrop, styles.container, { opacity: visible }],
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 111
+          }
+        }),
+        _react2.default.createElement(
+          _reactNative.Animated.View,
+          {
+            style: [styles.content, transparent ? null : styles.background, { opacity: opacity, transform: [{ translateY: translate }] }], __source: {
+              fileName: _jsxFileName,
+              lineNumber: 114
+            }
+          },
+          this.props.children
+        )
+      );
+    }
+  }]);
+  return ModalImplementation;
+}(_react.Component);
+
+exports.default = ModalImplementation;
+
+
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0
+  },
+  content: {
+    flex: 1
+  },
+  background: {
+    backgroundColor: 'white'
+  },
+  backdrop: {
+    backgroundColor: 'rgba(0, 0, 0, .6)'
+  }
+});
