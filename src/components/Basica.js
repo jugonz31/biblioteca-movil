@@ -4,16 +4,24 @@ import{
 	StyleSheet,
 	View,
 	Text,
+	Button,
 	Image,
 	ScrollView,
 	TouchableHighlight,
-	Picker
+	Picker,
+	TextInput
 } from 'react-native'
 
 class Basica extends Component{
+
+	constructor(props){
+		super(props);
+		this.state = {text: ''};
+	}
+
     render(){
         return(
-	
+		<View>
 		<View style = {styles.textWithIcon}>
 				<Text style = {styles.text}>Búsqueda básica</Text>
 		</View>
@@ -33,8 +41,39 @@ class Basica extends Component{
 				<Picker.Item label= "Títulos de Revistas" value= "-" />
 				<Picker.Item label= "Serie" value= "-" />
 			</Picker>
+
+			<Text style = {styles.text}>Ingrese los términos de búsqueda</Text>
+			<TextInput
+          		style={styles.text}
+          		placeholder=""
+          		onChangeText={(text) => this.setState({text})}
+        	/>
+			<Button
+  				onPress={onPressLearnMore}
+  				title="Buscar"
+  				color="#841584"
+  				accessibilityLabel="Ver más..."
+			/>
+			<Button
+  				onPress={onPressLearnMore}
+  				title="Borrar"
+  				color="#841584"
+  				accessibilityLabel="Ver más..."
+			/>
+		</View>
+		
+		<View style = {styles.textWithIcon}>
+				<Text style = {styles.text}>Limitar material a:</Text>
+
+				<CheckBox
+					label='Label'
+					checked={true}
+					onChange={(checked) => console.log('Confirmado', checked)}
+				/>
+				<Text style = {styles.text}>Sólo material de texto completo</Text>
 		</View>
 
+		</View>
 
         )
     }

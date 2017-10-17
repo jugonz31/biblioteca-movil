@@ -23,6 +23,7 @@
     "ionicons": "^3.0.0",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.47.0",
+    "react-native-checkbox": "^1.2.0",
     "react-native-elements": "^0.17.0",
     "react-native-navigation-bar": "^0.2.1",
     "react-native-side-menu": "^1.1.3",
