@@ -29,17 +29,18 @@ class Basica extends Component{
 		<View style = {styles.textWithIcon}>
 			<Text style = {styles.text}>Búsqueda por:</Text>
 			<Picker
-  				selectedValue={this.state.language}
-  				onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
-  				<Picker.Item label= "Todos" value= "-" />
-  				<Picker.Item label= "Autor" value= "-" />
-				<Picker.Item label= "Clasificación" value= "-" />
-				<Picker.Item label= "ISBN/ISSN" value= "-" />
-				<Picker.Item label= "Editorial" value= "-" />
-				<Picker.Item label= "Tema/Materias" value= "-" />
-				<Picker.Item label= "Título" value= "-" />
-				<Picker.Item label= "Títulos de Revistas" value= "-" />
-				<Picker.Item label= "Serie" value= "-" />
+				selectedValue={this.state.language}
+				onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}
+				defaultValue="titulo">
+				<Picker.Item label= "Todos" value= "todos" />
+				<Picker.Item label= "Autor" value= "autor" />
+				<Picker.Item label= "Clasificación" value= "clasificacion" />
+				<Picker.Item label= "ISBN/ISSN" value= "isbn" />
+				<Picker.Item label= "Editorial" value= "editorial" />
+				<Picker.Item label= "Tema/Materias" value= "tema" />
+				<Picker.Item label= "Título" value= "titulo" />
+				<Picker.Item label= "Títulos de Revistas" value= "revistas" />
+				<Picker.Item label= "Serie" value= "serie" />
 			</Picker>
 
 			<Text style = {styles.text}>Ingrese los términos de búsqueda</Text>
