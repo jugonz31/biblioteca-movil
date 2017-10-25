@@ -10,6 +10,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 
+var TVShowCtrl = require('./controllers/tvshows');
+
+// API routes
+var tvshows = express.Router();
+
+tvshows.route('/tvshows')
+  .get(TVShowCtrl.findAllTVShows)
+  .post(TVShowCtrl.addTVShow);
+
+tvshows.route('/tvshows/:id')
+  .get(TVShowCtrl.findById)
+  .put(TVShowCtrl.updateTVShow)
+  .delete(TVShowCtrl.deleteTVShow);
+
+app.use('/api', tvshows);
+
 var router = express.Router();
 
 router.get('/', function(req, res) {
