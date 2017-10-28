@@ -185,12 +185,6 @@
 	}
 
 	const styles = StyleSheet.create({
-		menu: {
-			flex: 1,
-			width: width,
-			height: height,
-			backgroundColor: "#000066"
-		},
 		text: {
 			color: 'black',
 			fontSize: 20
@@ -205,4 +199,4 @@
 		}
 	})
 
-	export default Avanzada
+export default Avanzada;

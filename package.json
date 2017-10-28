@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "body-parser": "^1.18.2",
-    "expo": "^20.0.0",
+    "expo": "^20.1.3",
     "express": "^4.16.1",
     "ionicons": "^3.0.0",
     "method-override": "^2.3.10",
@@ -30,8 +30,9 @@
     "react-native-checkbox": "^1.2.0",
     "react-native-elements": "^0.17.0",
     "react-native-navigation-bar": "^0.2.1",
+    "react-native-picker": "^4.2.0",
     "react-native-side-menu": "^1.1.3",
-    "react-native-vector-icons": "^4.4.0",
+    "react-native-vector-icons": "^4.4.2",
     "react-navigation": "^1.0.0-beta.15",
     "xmljson": "^0.2.0"
   },

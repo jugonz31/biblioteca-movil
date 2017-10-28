@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import{
 	Dimensions,
 	StyleSheet,
@@ -9,8 +9,9 @@ import{
 	ScrollView,
 	TouchableHighlight,
 	Picker,
-	TextInput
-} from 'react-native'
+	TextInput,
+	CheckBox
+} from 'react-native';
 
 class Basica extends Component{
 
@@ -22,6 +23,7 @@ class Basica extends Component{
     render(){
         return(
 		<View>
+
 		<View style = {styles.textWithIcon}>
 				<Text style = {styles.text}>Búsqueda básica</Text>
 		</View>
@@ -50,13 +52,11 @@ class Basica extends Component{
           		onChangeText={(text) => this.setState({text})}
         	/>
 			<Button
-  				onPress={onPressLearnMore}
   				title="Buscar"
   				color="#841584"
   				accessibilityLabel="Ver más..."
 			/>
 			<Button
-  				onPress={onPressLearnMore}
   				title="Borrar"
   				color="#841584"
   				accessibilityLabel="Ver más..."
@@ -76,17 +76,11 @@ class Basica extends Component{
 
 		</View>
 
-        )
+        );
     }
 }
 
 const styles = StyleSheet.create({
-	menu: {
-		flex: 1,
-		width: width,
-		height: height,
-		backgroundColor: "#000066"
-	},
 	text: {
 		color: 'black',
 		fontSize: 20
@@ -101,4 +95,4 @@ const styles = StyleSheet.create({
 	}
 })
 
-export default Basica
+export default Basica;
