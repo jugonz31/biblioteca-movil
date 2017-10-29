@@ -26,9 +26,9 @@ const DrawerNavigation = StackNavigator({
             paddingRight: 10
         },
         headerRight: 
-            <View>
-                  <Image style= {styles.logo} source = {require('../resources/logo.png')} />
-            </View>,
+        <View>
+            <Image style= {styles.logo} source = {require('../resources/logo.png')} />
+        </View>,
         headerTintColor: 'black',
         headerLeft: <View>
             <TouchableHighlight 
