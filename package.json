@@ -29,6 +29,7 @@
     "react-native": "^0.47.0",
     "react-native-checkbox": "^1.2.0",
     "react-native-elements": "^0.17.0",
+    "react-native-form-generator": "^0.9.9",
     "react-native-navigation-bar": "^0.2.1",
     "react-native-picker": "^4.2.0",
     "react-native-side-menu": "^1.1.3",

@@ -9,8 +9,14 @@ import {Dimensions,
     TouchableHighlight,
     Picker,
 	TextInput,
-    CheckBox
+    CheckBox,
 } from 'react-native';
+
+import { Form,
+    Separator,InputField, LinkField,
+    SwitchField, PickerField,DatePickerField,TimePickerField
+   } from 'react-native-form-generator';
+
 import { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -38,7 +44,17 @@ class Basica extends Component {
                     <Text style = {styles.text}>Búsqueda por:</Text>
                 </View>
                 <View>
-                    <Text>Picker</Text>
+                    <PickerField style = {styles.picker} ref='busquedapor'
+                        options={{
+                        todos: 'Todos',
+                        autor: 'Autor',
+                        isbn: 'ISBN / ISSN',
+                        editorial: 'Editorial',
+                        tema_materia: 'Tema / Materias',
+                        titulo: 'Título',
+                        titulo_revista: 'Títulos de Revistas',
+                        serie: 'Serie'
+                    }}/>
                 </View>
                 <View style = {styles.textWithIcon}>
                     <TextInput
@@ -52,7 +68,7 @@ class Basica extends Component {
                     <Text style = {styles.text}>Limitar material a:</Text>
                 </View>
                 <View>
-                    <Text>CheckBox</Text>
+                    <SwitchField label=' Sólo material de texto completo'/>
                 </View>
                 <View style = {styles.textWithIcon}>
 				<Text style = {styles.text}>Sólo material de texto completo</Text>
@@ -88,6 +104,9 @@ const styles = StyleSheet.create({
     textMenu: {
         color: '#000066',
 		fontSize: 24
+    },
+    picker: {
+        backgroundColor: 'E0E0E0'
     }
 })
 
