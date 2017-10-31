@@ -31,6 +31,9 @@ const DrawerScreen = DrawerNavigator({
     },
     drawerTintColor: 'white',
     drawerBackgroundColor: '#000066',
+    contentOptions: {
+        inactiveTintColor: 'white'
+    }
 })
 
 const styles = StyleSheet.create({
