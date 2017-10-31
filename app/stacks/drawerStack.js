@@ -25,11 +25,11 @@ const DrawerNavigation = StackNavigator({
             paddingLeft: 10,
             paddingRight: 10
         },
-        headerRight: 
-        <View>
+        
+        headerTintColor: 'black',
+        headerRight: <View>
             <Image style= {styles.logo} source = {require('../resources/logo.png')} />
         </View>,
-        headerTintColor: 'black',
         headerLeft: <View>
             <TouchableHighlight 
                 onPress={() => {
@@ -44,7 +44,6 @@ const DrawerNavigation = StackNavigator({
                     color = "black"
                     size = {25}
                 />
-                
             </TouchableHighlight>
         </View>
     })

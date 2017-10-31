@@ -3,7 +3,6 @@ import {Dimensions,
 	StyleSheet,
 	View,
 	Text,
-	Button,
 	Image,
 	ScrollView,
     TouchableHighlight,
@@ -22,7 +21,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Ionicons';
-import { Button } from 'react-native-elements';
+import Button from 'apsl-react-native-button';
 
 var color = 'white';
 class Basica extends Component {
@@ -36,20 +35,41 @@ class Basica extends Component {
             />
         )
       };
+      handleFormChange(formData){
+        /*
+        formData will contain all the values of the form,
+        in this example.
+     
+        formData = {
+        first_name:"",
+        last_name:"",
+        gender: '',
+        birthday: Date,
+        has_accepted_conditions: bool
+        }
+        */
+     
+        this.setState({formData:formData})
+        this.props.onFormChange && this.props.onFormChange(formData);
+      }
+      handleFormFocus(e, component){
+        //console.log(e, component); 
+      }
+      openTermsAndConditionsURL(){
+     
+      }
     render() {
-        return (
-            <View style = {styles.fondo}>
-                
-                <View style = {styles.textWithIcon}>
-				    <Text style = {styles.textTitle}> Búsqueda básica</Text>
-		        </View>
-                <View>
-                    <Text style = {styles.text}> Búsqueda por:</Text>
-                </View>
-                <View><Text></Text></View>
-                <View>
-                <View style = {styles.fondo2}></View>
-                    <PickerField 
+        return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
+        <Form
+            ref='busquedaBasica'
+            onFocus={this.handleFormFocus.bind(this)}
+            onChange={this.handleFormChange.bind(this)}
+            label="Búsqueda Básica"
+            >
+            <Separator />
+            <Text style = {styles.text}> Búsqueda por:</Text>
+            <Text></Text>
+            <PickerField 
                         style = {styles.picker} 
                         ref='busquedapor'
                         iconRight={
@@ -70,40 +90,32 @@ class Basica extends Component {
                         titulo_revista: 'Títulos de Revistas',
                         serie: 'Serie',                    
                     }}/> 
-                </View>
-                <View style = {styles.fondo2}></View>
-                    <View>
-                        <Text style = {styles.text}> Ingrese los términos de búsqueda:</Text>
+                    <Text></Text>
+                    <Text style = {styles.text}> Ingrese los términos de búsqueda:</Text>
+                    <View><Text></Text></View>
+                    <InputField ref=' busqueda' placeholder=' Ingrese los términos de búsqueda'/>
+                    <View><Text></Text></View>
+                    <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
+		            alignItems: 'center'}}>
+                    <Button 
+                        style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
+                        textStyle={{fontSize: 25, color: 'white'}}>
+                        Buscar
+                    </Button>
+                    <Button 
+                        style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
+                        textStyle={{fontSize: 25, color: 'white'}}>
+                        Borrar
+                    </Button>
                     </View>
                     <View><Text></Text></View>
-                    <View>
-                        <InputField ref=' busqueda' placeholder=' Ingrese los términos de búsqueda'/>
-                    </View>
-                    <View><Text></Text></View>
-                    <View style = {styles.fondo2}>
-                                    <Button
-                                    backgroundColor = '#000066'
-                                    title='BUTTON' />
-                    </View>
-                <View style = {styles.textWithIcon}>
-                                
-                </View>
-
-                <View>
                     <Text style = {styles.text}> Limitar material a:</Text>
-                </View>
-                <View><Text></Text></View>
-                <View style = {styles.fondo2}></View>
-                <View>
+                    <View><Text></Text></View>
                     <SwitchField 
                     label=' Sólo material de texto completo'
                     />
-                </View>
-                <View style = {styles.fondo2}></View>
-                <View style = {styles.textWithIcon}>
-                </View>
-
-            </View>
+            </Form>
+        </ScrollView>
         );
     }
 }
@@ -147,7 +159,17 @@ const styles = StyleSheet.create({
     },
     rightIcon: {
 		paddingRight: 20
-	}
+    },
+    button: {
+        flex: 1,
+        paddingHorizontal: 40,
+        flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		borderColor: 'black',
+        borderBottomWidth: 3,
+        backgroundColor: 'gray'
+    },
 })
 
 let formStyles = StyleSheet.create({

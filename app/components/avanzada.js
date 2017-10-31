@@ -29,7 +29,7 @@ class Avanzada extends React.Component{
     drawerLabel: ({color = "white"}) => ('Avanzada'),
     drawerIcon: ({ tintColor }) => (
         <FontAwesome
-                name = "search"
+                name = "book"
                 color = "white"
                 size = {24}
         />
