@@ -201,12 +201,12 @@
                   alignItems: 'center'}}>
                       <Button 
                           style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
-                          textStyle={{fontSize: 25, color: 'white'}}>
+                          textStyle={{fontSize: 20, color: 'white'}}>
                           Buscar
                       </Button>
                       <Button 
                           style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
-                          textStyle={{fontSize: 25, color: 'white'}}>
+                          textStyle={{fontSize: 20, color: 'white'}}>
                           Borrar
                       </Button>
                       </View>
