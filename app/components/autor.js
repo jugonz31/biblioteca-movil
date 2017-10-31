@@ -75,7 +75,7 @@ class Autor extends Component {
                     <Text></Text>
                     <PickerField 
                         style = {styles.picker} 
-                        ref='busquedaAutor'
+                        ref='busquedaAutorPicker'
                         iconRight={
                             <FontAwesome 
                             name='angle-right'

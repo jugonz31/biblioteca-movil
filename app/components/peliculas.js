@@ -96,7 +96,7 @@ class Peliculas extends Component {
                     <Text></Text>
                     <PickerField 
                         style = {styles.picker} 
-                        ref='busquedapor'
+                        ref='pais'
                         iconRight={
                             <FontAwesome 
                             name='angle-right'
@@ -135,7 +135,7 @@ class Peliculas extends Component {
                     <Text></Text>
                     <PickerField 
                         style = {styles.picker} 
-                        ref='busquedapor'
+                        ref='genero'
                         iconRight={
                             <FontAwesome 
                             name='angle-right'
@@ -189,13 +189,13 @@ class Peliculas extends Component {
                     <Text></Text>
                     <Text style = {styles.text}>Año:</Text>
                     <View><Text></Text></View>
-                    <InputField ref=' busqueda' placeholder='(YYYY)'/>
+                    <InputField ref='año' placeholder='(YYYY)'/>
                     <View><Text></Text></View>
                     <Text style = {styles.text}>Ubicación / Sede:</Text>
                     <Text></Text>
                     <PickerField 
                         style = {styles.picker} 
-                        ref='busquedapor'
+                        ref='sede'
                         iconRight={
                             <FontAwesome 
                             name='angle-right'

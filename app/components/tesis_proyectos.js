@@ -91,7 +91,7 @@ class Tesis_Proyectos extends Component {
                     <View><Text></Text></View>
                     <Text style = {styles.text}>Seleccione el área en que desea realizar la búsqueda:</Text>
                     <Text></Text>
-                    <PickerField ref='gender'
+                    <PickerField ref='areaAdministracion'
                         label='Escuela de Administración'
                         options={{
                             ea1: 'Administración de Negocios (pregrado)',
@@ -109,7 +109,7 @@ class Tesis_Proyectos extends Component {
                             ea13: 'Especialización en Administración de Riesgos y Seguros'
                     }}/>
                     <Text></Text>
-                    <PickerField ref='gender'
+                    <PickerField ref='areaIngenierias'
                         label='Escuela de Ingenierías'
                         options={{
                             ei1: 'Ingeniería Civil (pregrado)',
@@ -127,7 +127,7 @@ class Tesis_Proyectos extends Component {
                             ei13: 'Especialización en Administración de Riesgos y Seguros'
                     }}/>
                     <Text></Text>
-                    <PickerField ref='gender'
+                    <PickerField ref='areaCiencias'
                         label='Escuela de Ciencias'
                         options={{
                             ec1: 'Biología (pregrado)',
@@ -141,7 +141,7 @@ class Tesis_Proyectos extends Component {
                             ec9: 'Doctorado en Ciencias de la Tierra'
                     }}/>
                     <Text></Text>
-                    <PickerField ref='gender'
+                    <PickerField ref='areaHumanidades'
                         label='Escuela de Humanidades'
                         options={{
                             eh1: 'Ciencias políticas (pregrado)',
@@ -159,14 +159,14 @@ class Tesis_Proyectos extends Component {
                             eh13: 'Doctorado en Humanidades'
                     }}/>
                     <Text></Text>
-                    <PickerField ref='gender'
+                    <PickerField ref='areaDerecho'
                         label='Escuela de Derecho'
                         options={{
                             ed1: 'Derecho (pregrado)',
                             ed2: 'Maestría en Derecho Penal'
                     }}/>
                     <Text></Text>
-                    <PickerField ref='gender'
+                    <PickerField ref='areaEconomía'
                         label='Escuela de Economía y Finanzas'
                         options={{
                             eef1: 'Economía (pregrado)',
