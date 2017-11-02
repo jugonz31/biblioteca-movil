@@ -9,13 +9,13 @@ import {Dimensions,
     Picker,
 	TextInput,
     CheckBox,
+    Modal
 } from 'react-native';
-
+import {DrawerNavigator, StackNavigator} from 'react-navigation';
 import { Form,
     Separator,InputField, LinkField,
     SwitchField, PickerField,DatePickerField,TimePickerField
    } from 'react-native-form-generator';
-
 import { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -24,7 +24,9 @@ import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
 
 var color = 'white';
+
 class Basica extends Component {
+    
     static navigationOptions = {
         drawerLabel: ({color = "white"}) => ('Básica'),
         drawerIcon: ({ tintColor }) => (
@@ -35,25 +37,22 @@ class Basica extends Component {
             />
         )
       };
+
+      state = {
+        modalVisible: false,
+      }
+    
+      setModalVisible(visible) {
+        this.setState({modalVisible: visible});
+      }
+      
       handleFormChange(formData){
-        /*
-        formData will contain all the values of the form,
-        in this example.
-     
-        formData = {
-        first_name:"",
-        last_name:"",
-        gender: '',
-        birthday: Date,
-        has_accepted_conditions: bool
-        }
-        */
      
         this.setState({formData:formData})
         this.props.onFormChange && this.props.onFormChange(formData);
       }
       handleFormFocus(e, component){
-        //console.log(e, component); 
+       
       }
       openTermsAndConditionsURL(){
      
@@ -67,6 +66,7 @@ class Basica extends Component {
             label="Búsqueda Básica"
             >
             <Separator />
+            
             <Text style = {styles.text}> Búsqueda por:</Text>
             <Text></Text>
             <PickerField 
@@ -93,15 +93,37 @@ class Basica extends Component {
                     <Text></Text>
                     <Text style = {styles.text}> Ingrese los términos de búsqueda:</Text>
                     <View><Text></Text></View>
-                    <InputField ref=' busqueda' placeholder=' Ingrese los términos de búsqueda'/>
+                    <InputField 
+                    ref='busqueda' 
+                    placeholder='Ingrese los términos de búsqueda'/>
+                    <Modal
+                        animationType="slide"
+                        transparent={false}
+                        visible={this.state.modalVisible}
+                        onRequestClose={() => {this.setModalVisible(!this.state.modalVisible)}}
+                        >
+                        <View style={{marginTop: 22}}>
+                        <View>
+                            <Text>LISTA DE LIBROS</Text>
+                        </View>
+                        </View>
+                        </Modal>
                     <View><Text></Text></View>
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
 		            alignItems: 'center'}}>
-                    <Button 
-                        style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
-                        textStyle={{fontSize: 20, color: 'white'}}>
-                        Buscar
-                    </Button>
+                    <View>
+                    <TouchableHighlight onPress={() => {
+                        this.setModalVisible(true)
+                        }}>
+                        <View>
+                        <Button 
+                            style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
+                            textStyle={{fontSize: 20, color: 'white'}}>
+                            Buscar
+                        </Button>
+                        </View>
+                    </TouchableHighlight>
+                    </View>
                     <Button 
                         style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
                         textStyle={{fontSize: 20, color: 'white'}}>

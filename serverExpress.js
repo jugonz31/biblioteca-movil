@@ -23,7 +23,7 @@ var router = express.Router();
 
 // Index - Route
 router.get('/', function(req, res) { 
- res.send("Hello World!");
+ res.send("Proyecto Integrador 1 - Biblioteca Móvil EAFIT");
 });
 
 app.use(router);
@@ -40,7 +40,7 @@ api.route('/books/:id')
  .put(ClientCtrl.update)
  .delete(ClientCtrl.delete);
 
-app.use('/eafit', api);
+app.use('/eafit/biblioteca-movil', api);
 
 
 // Start server

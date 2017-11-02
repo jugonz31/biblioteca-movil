@@ -1,4 +1,4 @@
-import {DrawerNavigator} from 'react-navigation';
+import {DrawerNavigator, StackNavigator} from 'react-navigation';
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import Basica from '../components/basica';
@@ -21,7 +21,7 @@ const DrawerScreen = DrawerNavigator({
     Tesis_Proyectos: {screen: Tesis_Proyectos},
     Películas: {screen: Peliculas},
     Música: {screen: Musica},
-    Tema_Materia: {screen: Tema_Materia},
+    Tema_Materia: {screen: Tema_Materia}
 }, {
     headerMode: 'none',
     headerStyle: {

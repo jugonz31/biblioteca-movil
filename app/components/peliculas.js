@@ -61,10 +61,10 @@ class Peliculas extends Component {
     render() {
         return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
         <Form
-            ref='busquedaBasica'
+            ref='peliculas'
             onFocus={this.handleFormFocus.bind(this)}
             onChange={this.handleFormChange.bind(this)}
-            label="Búsqueda Básica"
+            label="Audiovisuales - Cine"
             >
             <Separator />
             <Text style = {styles.text}>Búsqueda por:</Text>
