@@ -19,6 +19,7 @@ import { Form,
 import { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
@@ -28,8 +29,8 @@ class Peliculas extends Component {
     static navigationOptions = {
         drawerLabel: ({color = "white"}) => ('Películas'),
         drawerIcon: ({ tintColor }) => (
-            <FontAwesome
-                    name = "search"
+            <MaterialIcons
+                    name = "movie"
                     color = "white"
                     size = {24}
             />
@@ -66,7 +67,8 @@ class Peliculas extends Component {
             onChange={this.handleFormChange.bind(this)}
             label="Audiovisuales - Cine"
             >
-            <Separator />
+            <Text style = {styles.textTitle}>Audiovisuales - Cine</Text>
+            <Text></Text> 
             <Text style = {styles.text}>Búsqueda por:</Text>
             <Text></Text>
             <PickerField 
@@ -268,8 +270,9 @@ const styles = StyleSheet.create({
     },
     textTitle: {
         color: '#000066',
-		fontSize: 20,
-        fontWeight: 'bold'
+		fontSize: 25,
+        fontWeight: 'bold',
+        paddingVertical: 15
     },
 	textWithIcon: {
 		flexDirection: 'row',

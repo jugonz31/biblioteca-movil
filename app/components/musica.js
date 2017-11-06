@@ -29,7 +29,7 @@ class Musica extends Component {
         drawerLabel: ({color = "white"}) => ('Música'),
         drawerIcon: ({ tintColor }) => (
             <FontAwesome
-                    name = "search"
+                    name = "music"
                     color = "white"
                     size = {24}
             />
@@ -66,7 +66,8 @@ class Musica extends Component {
             onChange={this.handleFormChange.bind(this)}
             label="Audiovisuales - Música"
             >
-            <Separator />
+            <Text style = {styles.textTitle}>Audiovisuales - Música</Text>
+            <Text></Text> 
             <Text style = {styles.text}>Búsqueda por:</Text>
             <Text></Text>
             <PickerField 
@@ -281,8 +282,9 @@ const styles = StyleSheet.create({
     },
     textTitle: {
         color: '#000066',
-		fontSize: 20,
-        fontWeight: 'bold'
+		fontSize: 25,
+        fontWeight: 'bold',
+        paddingVertical: 15
     },
 	textWithIcon: {
 		flexDirection: 'row',

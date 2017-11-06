@@ -25,8 +25,24 @@ import Button from 'apsl-react-native-button';
 
 var color = 'white';
 
+export class ChildComponent extends Component{
+    render(){
+        if(this.props.result){
+            var res = this.props.result.map((item, i) => {
+                return(
+                    <Text style = {{backgroundColor: 'black'}}key = {i}>{item.movies}</Text>
+                )}
+        )}
+        return(
+            <View>
+                {res}
+            </View>
+        );
+    }
+
+}
+
 class Basica extends Component {
-    
     static navigationOptions = {
         drawerLabel: ({color = "white"}) => ('Básica'),
         drawerIcon: ({ tintColor }) => (
@@ -40,6 +56,17 @@ class Basica extends Component {
 
       state = {
         modalVisible: false,
+        data: null
+      }
+
+      componentDidMount(){
+          fetch('https://facebook.github.io/react-native/movies.json')
+          .then((response) => response.json())
+          .then((responseJson) => {
+              this.setState({
+                  data: responseJson.movies
+              })
+          })
       }
     
       setModalVisible(visible) {
@@ -57,6 +84,7 @@ class Basica extends Component {
       openTermsAndConditionsURL(){
      
       }
+
     render() {
         return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
         <Form
@@ -65,21 +93,14 @@ class Basica extends Component {
             onChange={this.handleFormChange.bind(this)}
             label="Búsqueda Básica"
             >
-            <Separator />
-            
-            <Text style = {styles.text}> Búsqueda por:</Text>
+			<Text style = {styles.textTitle}>Búsqueda básica</Text>
+            <Text></Text>      
+            <Text style = {styles.text}>Búsqueda por:</Text>
             <Text></Text>
             <PickerField 
-                        style = {styles.picker} 
+                        style = {styles.picker}
+                        iconRight={<FontAwesome name='angle-right'size={25}/>} 
                         ref='busquedapor'
-                        iconRight={
-                            <FontAwesome 
-                            name='angle-right'
-                            size={24}
-                            style={[
-                                formStyles.alignRight,{color: '#000066'},
-                                this.props.iconStyle]}/>
-                        }
                         options={{
                         todos: 'Todos',
                         autor: 'Autor',
@@ -88,10 +109,10 @@ class Basica extends Component {
                         tema_materia: 'Tema / Materias',
                         titulo: 'Título',
                         titulo_revista: 'Títulos de Revistas',
-                        serie: 'Serie',                    
-                    }}/> 
+                        serie: 'Serie'                    
+                    }}/>
                     <Text></Text>
-                    <Text style = {styles.text}> Ingrese los términos de búsqueda:</Text>
+                    <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                     <View><Text></Text></View>
                     <InputField 
                     ref='busqueda' 
@@ -103,11 +124,9 @@ class Basica extends Component {
                         onRequestClose={() => {this.setModalVisible(!this.state.modalVisible)}}
                         >
                         <View style={{marginTop: 22}}>
-                        <View>
-                            <Text>LISTA DE LIBROS</Text>
+                         <ChildComponent result = {this.state.data}/>
                         </View>
-                        </View>
-                        </Modal>
+                    </Modal>
                     <View><Text></Text></View>
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
 		            alignItems: 'center'}}>
@@ -131,7 +150,7 @@ class Basica extends Component {
                     </Button>
                     </View>
                     <View><Text></Text></View>
-                    <Text style = {styles.text}> Limitar material a:</Text>
+                    <Text style = {styles.text}>Limitar material a:</Text>
                     <View><Text></Text></View>
                     <SwitchField 
                     label=' Sólo material de texto completo'
@@ -158,16 +177,14 @@ const styles = StyleSheet.create({
     },
     textTitle: {
         color: '#000066',
-		fontSize: 20,
-        fontWeight: 'bold'
+		fontSize: 25,
+        fontWeight: 'bold',
+        paddingVertical: 15
     },
 	textWithIcon: {
 		flexDirection: 'row',
-		justifyContent: 'space-between',
-		alignItems: 'center',
-		paddingVertical: 20,
-		borderColor: '#000066',
-		borderBottomWidth: 3
+        alignItems: 'center',
+        paddingVertical: 10
     },
     textMenu: {
         color: '#000066',

@@ -19,17 +19,18 @@ import { Form,
 import { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
 
 class Tema_Materia extends Component {
     static navigationOptions = {
-        drawerLabel: 'Autor',
+        drawerLabel: 'Tema/Materia',
         drawerIcon: ({ tintColor }) => (
-            <FontAwesome
+            <Entypo
                     style = {styles.icon}
-                    name = "search"
+                    name = "text-document"
                     color = "white"
                     size = {25}
             />
@@ -66,7 +67,8 @@ class Tema_Materia extends Component {
             onChange={this.handleFormChange.bind(this)}
             label="Temas"
             >
-            <Separator />
+            <Text style = {styles.textTitle}>Temas</Text>
+            <Text></Text>   
             <Text style = {styles.text}>Ingrese el tema de búsqueda</Text>
                     <Text></Text>
                     <InputField ref='busquedaTema' placeholder='Ingrese el tema de búsqueda'/>
@@ -142,8 +144,9 @@ const styles = StyleSheet.create({
     },
     textTitle: {
         color: '#000066',
-		fontSize: 20,
-        fontWeight: 'bold'
+		fontSize: 25,
+        fontWeight: 'bold',
+        paddingVertical: 15
     },
 	textWithIcon: {
 		flexDirection: 'row',

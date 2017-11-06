@@ -8,6 +8,7 @@ import Revistas from '../components/revistas';
 import Tesis_Proyectos from '../components/tesis_proyectos';
 import Peliculas from '../components/peliculas';
 import Musica from '../components/musica';
+import Sinbad from '../components/sinbad';
 import Tema_Materia from '../components/tema_materia';
 import { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome } from '@expo/vector-icons';
@@ -21,7 +22,8 @@ const DrawerScreen = DrawerNavigator({
     Tesis_Proyectos: {screen: Tesis_Proyectos},
     Películas: {screen: Peliculas},
     Música: {screen: Musica},
-    Tema_Materia: {screen: Tema_Materia}
+    Tema_Materia: {screen: Tema_Materia},
+    Sinbad: {screen: Sinbad}
 }, {
     headerMode: 'none',
     headerStyle: {

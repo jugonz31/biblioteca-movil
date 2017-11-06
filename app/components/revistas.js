@@ -19,6 +19,7 @@ import { Form,
 import { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
@@ -28,8 +29,8 @@ class Revistas extends Component {
     static navigationOptions = {
         drawerLabel: ({color = "white"}) => ('Revistas'),
         drawerIcon: ({ tintColor }) => (
-            <FontAwesome
-                    name = "search"
+            <Entypo
+                    name = "folder-images"
                     color = "white"
                     size = {24}
             />
@@ -66,8 +67,9 @@ class Revistas extends Component {
             onChange={this.handleFormChange.bind(this)}
             label="Búsqueda Básica"
             >
-            <Separator />
-            <Text style = {styles.text}> Búsqueda por:</Text>
+            <Text style = {styles.textTitle}>Revistas</Text>
+            <Text></Text>   
+            <Text style = {styles.text}>Búsqueda por:</Text>
             <Text></Text>
             <PickerField 
                         style = {styles.picker} 
@@ -86,7 +88,7 @@ class Revistas extends Component {
                         pe: 'Publicador/Editor'                
                     }}/> 
                     <Text></Text>
-                    <Text style = {styles.text}> Ingrese los términos de búsqueda:</Text>
+                    <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                     <View><Text></Text></View>
                     <InputField ref=' busqueda' placeholder=' Ingrese los términos de búsqueda'/>
                     <View><Text></Text></View>
@@ -125,8 +127,14 @@ const styles = StyleSheet.create({
     },
     textTitle: {
         color: '#000066',
-		fontSize: 20,
-        fontWeight: 'bold'
+		fontSize: 25,
+        fontWeight: 'bold',
+        paddingVertical: 15
+    },
+    textWithIcon: {
+		flexDirection: 'row',
+        alignItems: 'center',
+        paddingVertical: 10
     },
 	textWithIcon: {
 		flexDirection: 'row',

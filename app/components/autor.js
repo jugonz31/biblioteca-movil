@@ -19,6 +19,7 @@ import { Form,
 import { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { MaterialIcons} from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
@@ -27,9 +28,9 @@ class Autor extends Component {
     static navigationOptions = {
         drawerLabel: 'Autor',
         drawerIcon: ({ tintColor }) => (
-            <FontAwesome
+            <MaterialIcons
                     style = {styles.icon}
-                    name = "search"
+                    name = "person"
                     color = "white"
                     size = {25}
             />
@@ -66,7 +67,8 @@ class Autor extends Component {
             onChange={this.handleFormChange.bind(this)}
             label="Autores"
             >
-            <Separator />
+            <Text style = {styles.textTitle}>Autores</Text>
+            <Text></Text> 
             <Text style = {styles.text}>Ingrese el autor de búsqueda (ej. apellido, nombre)</Text>
                     <Text></Text>
                     <InputField ref='busquedaAutor' placeholder='Ingrese el autor de búsqueda'/>
@@ -126,8 +128,9 @@ const styles = StyleSheet.create({
     },
     textTitle: {
         color: '#000066',
-		fontSize: 20,
-        fontWeight: 'bold'
+		fontSize: 25,
+        fontWeight: 'bold',
+        paddingVertical: 15
     },
 	textWithIcon: {
 		flexDirection: 'row',

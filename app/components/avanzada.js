@@ -29,7 +29,7 @@
           drawerLabel: ({color = "white"}) => ('Avanzada'),
           drawerIcon: ({ tintColor }) => (
               <FontAwesome
-                      name = "search"
+                      name = "ravelry"
                       color = "white"
                       size = {24}
               />
@@ -66,8 +66,9 @@
               onChange={this.handleFormChange.bind(this)}
               label="Búsqueda Avanzada"
               >
-              <Separator />
-              <Text style = {styles.text}> Búsqueda por:</Text>
+              <Text style = {styles.textTitle}>Búsqueda avanzada</Text>
+                <Text></Text> 
+              <Text style = {styles.text}>Búsqueda por:</Text>
               <Text></Text>
               <PickerField 
                           style = {styles.picker} 
@@ -91,7 +92,7 @@
                           serie: 'Serie',                    
                       }}/> 
                       <Text></Text>
-                      <Text style = {styles.text}> Ingrese los términos de búsqueda:</Text>
+                      <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                       <View><Text></Text></View>
                       <InputField ref=' busquedaUno' placeholder=' Ingrese los términos de búsqueda'/>
                       <View><Text></Text></View>
@@ -110,7 +111,7 @@
                           y : 'Y',
                           o : 'O'                    
                       }}/> 
-              <Text style = {styles.text}> Búsqueda por:</Text>
+              <Text style = {styles.text}>Búsqueda por:</Text>
               <Text></Text>
               <PickerField 
                           style = {styles.picker} 
@@ -134,7 +135,7 @@
                           serie: 'Serie',                    
                       }}/> 
                       <Text></Text>
-                      <Text style = {styles.text}> Ingrese los términos de búsqueda:</Text>
+                      <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                       <View><Text></Text></View>
                       <InputField ref=' busquedaDos' placeholder=' Ingrese los términos de búsqueda'/>
                       <View><Text></Text></View>
@@ -153,7 +154,7 @@
                           y : 'Y',
                           o : 'O'                    
                       }}/> 
-                      <Text style = {styles.text}> Búsqueda por:</Text>
+                      <Text style = {styles.text}>Búsqueda por:</Text>
               <Text></Text>
               <PickerField 
                           style = {styles.picker} 
@@ -177,7 +178,7 @@
                           serie: 'Serie',                    
                       }}/> 
                       <Text></Text>
-                      <Text style = {styles.text}> Ingrese los términos de búsqueda:</Text>
+                      <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                       <View><Text></Text></View>
                       <InputField ref='busquedaTres' placeholder=' Ingrese los términos de búsqueda'/>
                       <View><Text></Text></View>
@@ -211,9 +212,9 @@
                       </Button>
                       </View>
                       <View><Text></Text></View>
-                      <Text style = {styles.text}> Limitar material a:</Text>
+                      <Text style = {styles.text}>Limitar material a:</Text>
                       <View><Text></Text></View>
-                      <Text style = {styles.text}> Tipo de material: </Text>
+                      <Text style = {styles.text}>Tipo de material: </Text>
                       <PickerField 
                           style = {styles.picker} 
                           ref='tipoMaterial'
@@ -246,11 +247,11 @@
                           software : 'Software',
                           tesis : 'Tesis',                     
                       }}/> 
-                      <Text style = {styles.text}> Fecha de edición:</Text>
+                      <Text style = {styles.text}>Fecha de edición:</Text>
                       <View><Text></Text></View>
                       <InputField ref='fechaEdicion' placeholder=' Ingrese la fecha de edición'/>
                       <View><Text></Text></View>
-                      <Text style = {styles.text}> Ubicación/Sede: </Text>
+                      <Text style = {styles.text}>Ubicación/Sede: </Text>
                       <PickerField 
                           style = {styles.picker} 
                           ref='ubicacion'
@@ -271,7 +272,7 @@
                           pereira : 'Pereira'                     
                       }}/>
                       <View><Text></Text></View>
-                      <Text style = {styles.text}> Idioma: </Text>
+                      <Text style = {styles.text}>Idioma: </Text>
                       <PickerField 
                           style = {styles.picker} 
                           ref='idioma'
@@ -328,10 +329,11 @@
       fontSize: 20,
       },
       textTitle: {
-          color: '#000066',
-      fontSize: 20,
-          fontWeight: 'bold'
-      },
+        color: '#000066',
+		fontSize: 25,
+        fontWeight: 'bold',
+        paddingVertical: 15
+    },
     textWithIcon: {
       flexDirection: 'row',
       justifyContent: 'space-between',
