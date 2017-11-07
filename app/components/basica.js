@@ -30,11 +30,12 @@ export class ChildComponent extends Component{
         if(this.props.result){
             var res = this.props.result.map((item, i) => {
                 return(
-                    <Text style = {{backgroundColor: 'black'}}key = {i}>{item.movies}</Text>
+                    <Text key = {i}>{item.movies}</Text>
                 )}
         )}
         return(
             <View>
+                <Text>LISTADO DE PELÍCULAS</Text>
                 {res}
             </View>
         );
