@@ -5,7 +5,13 @@ app.use(express.static(__dirname + '/public'));
 
 // Index - Route
 app.get('/', function(req, res) { 
- res.send("Proyecto Integrador 1 - Biblioteca Móvil EAFIT");
+ res.send("{" +
+          "" + "__v"+":"+ "0"+"," +
+          "" + "datestamp" + ":" + "19000101"+"," + 
+          "" + "title" + ":" + "Reloj de sol /Gabriel Zaid"+ "," + 
+          "" + "creator"+ ":" + "CADENA SILVA, CLAUDIA editor"+"," + 
+          "" + "subject" + ":" + "POESIA MEXICANA" + "," + 
+          "}");
 });
 
 // Start server

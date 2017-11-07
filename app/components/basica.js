@@ -24,20 +24,46 @@ import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
 
 var color = 'white';
+var textPicker = "";
+var textInput = "";
+var titulo = "";
+var todos = "";
+
+var texto = "";
 
 export class ChildComponent extends Component{
     render(){
         if(this.props.result){
-            var res = this.props.result.map((item, i) => {
+            var res1 = this.props.result.map((item, i) => {
+                if(textInput == item.title){
                 return(
-                    <Text key = {i}>{item.movies}</Text>
-                )}
-        )}
+                    <Text 
+                    style = {styles.textNormal}
+                    key = {i}>Título: {item.title}</Text>
+                )
+            }})
+            var res2 = this.props.result.map((item, i) => {
+                if(textInput == item.title){
+                return(
+                    <Text 
+                    style = {styles.textNormal}
+                    key = {i}>Año: {item.releaseYear}</Text>
+                )
+            }})
+    }
+
+        texto = <Text style = {styles.textTitle}>LISTADO DE PELÍCULAS</Text>;
         return(
-            <View>
-                <Text>LISTADO DE PELÍCULAS</Text>
-                {res}
-            </View>
+            <Form>
+                <LinkField 
+                style = {styles.textTitle}
+                label= {texto}/>
+                <Text></Text>
+                <LinkField
+                label = {res1}/>
+                <LinkField
+                label = {res2}/>
+            </Form>
         );
     }
 
@@ -78,6 +104,10 @@ class Basica extends Component {
      
         this.setState({formData:formData})
         this.props.onFormChange && this.props.onFormChange(formData);
+        textInput = formData.busqueda;
+        textPicker = formData.busquedapor;
+        titulo = formData.Título;
+        todos = formData.Todos;
       }
       handleFormFocus(e, component){
        
@@ -124,9 +154,11 @@ class Basica extends Component {
                         visible={this.state.modalVisible}
                         onRequestClose={() => {this.setModalVisible(!this.state.modalVisible)}}
                         >
-                        <View style={{marginTop: 22}}>
-                         <ChildComponent result = {this.state.data}/>
-                        </View>
+                        <Form>
+                         <ChildComponent 
+                         result = {this.state.data}
+                         />
+                        </Form>
                     </Modal>
                     <View><Text></Text></View>
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
@@ -179,6 +211,12 @@ const styles = StyleSheet.create({
     textTitle: {
         color: '#000066',
 		fontSize: 25,
+        fontWeight: 'bold',
+        paddingVertical: 15
+    },
+    textNormal: {
+        color: 'black',
+		fontSize: 22,
         fontWeight: 'bold',
         paddingVertical: 15
     },
