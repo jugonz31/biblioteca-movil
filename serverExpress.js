@@ -14,9 +14,6 @@ mongoose.connect('mongodb://https://biblioteca-movil.herokuapp.com/books', funct
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(bodyParser.json()); 
 app.use(methodOverride());
-
-app.set('port', (process.env.PORT || 5000));
-
 app.use(express.static(__dirname + '/public'));
 
 // Import Models and Controllers
@@ -47,6 +44,6 @@ api.route('/books/:id')
 app.use('/eafit/biblioteca-movil', api);
 
 // Start server
-app.listen(app.get('port'), function() {
-    console.log('Node app is running on port', app.get('port'));
+app.listen(process.env.PORT, function() {
+    console.log('Node app is running on port',process.env.PORT);
   });
