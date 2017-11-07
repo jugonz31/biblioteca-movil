@@ -164,17 +164,14 @@ class Basica extends Component {
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
 		            alignItems: 'center'}}>
                     <View>
-                    <TouchableHighlight onPress={() => {
-                        this.setModalVisible(true)
-                        }}>
                         <View>
                         <Button 
                             style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
-                            textStyle={{fontSize: 20, color: 'white'}}>
+                            textStyle={{fontSize: 20, color: 'white'}}
+                            onPress={() => {this.setModalVisible(true)}}>
                             Buscar
                         </Button>
                         </View>
-                    </TouchableHighlight>
                     </View>
                     <Button 
                         style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
