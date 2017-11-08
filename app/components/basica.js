@@ -18,6 +18,7 @@ import { Form,
    } from 'react-native-form-generator';
 import { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome } from '@expo/vector-icons';
+import { Card, ListItem, Button2 } from 'react-native-elements';
 import { Ionicons } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Ionicons';
@@ -26,50 +27,65 @@ import Button from 'apsl-react-native-button';
 var color = 'white';
 var textPicker = "";
 var textInput = "";
+var textInputClean = "";
 var titulo = "";
 var todos = "";
-
-var texto = "";
+var counter;
 
 export class ChildComponent extends Component{
     render(){
         if(this.props.result){
+            
             var res1 = this.props.result.map((item, i) => {
                 if(textInput == item.title){
                 return(
                     <Text 
                     style = {styles.textNormal}
-                    key = {i}>Título: {item.title}</Text>
+                    key = {i}>{item.title}</Text>
                 )
-            }})
+               
+            }
+            counter++;
+        })
             var res2 = this.props.result.map((item, i) => {
                 if(textInput == item.title){
                 return(
                     <Text 
                     style = {styles.textNormal}
-                    key = {i}>Año: {item.releaseYear}</Text>
+                    key = {i}>{item.releaseYear}</Text>
                 )
             }})
+       
     }
 
-        texto = <Text style = {styles.textTitle}>LISTADO DE PELÍCULAS</Text>;
+
         return(
-            <Form>
-                <LinkField 
-                style = {styles.textTitle}
-                label= {texto}/>
-                <Text></Text>
-                <LinkField
-                label = {res1}/>
-                <LinkField
-                label = {res2}/>
-            </Form>
+                <Form>
+                <Text style = {styles.textTitle}> {counter} Documentos encontrados</Text>
+                          
+                <Card
+                title={res1}
+                >
+                <Text style={{marginBottom: 10, fontSize: 25, fontStyle: 'bold'}}>
+                  Año: {res2}
+                </Text>
+                <Button2
+                  icon={{name: 'code'}}
+                  backgroundColor='#000066'
+                  buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                  title='Registro completo' />
+              </Card>
+              </Form>
+            
+
+            
         );
     }
 
 }
 
 class Basica extends Component {
+    
     static navigationOptions = {
         drawerLabel: ({color = "white"}) => ('Básica'),
         drawerIcon: ({ tintColor }) => (
@@ -97,7 +113,12 @@ class Basica extends Component {
       }
     
       setModalVisible(visible) {
-        this.setState({modalVisible: visible});
+        if(textInput != ""){
+            this.setState({modalVisible: visible});
+        }else{
+            this.setState({modalVisible: !visible});
+            alert("El campo está vacío.");
+        }
       }
       
       handleFormChange(formData){
@@ -115,8 +136,9 @@ class Basica extends Component {
       openTermsAndConditionsURL(){
      
       }
-
+      
     render() {
+        var textBox = <Text style = {styles.textNormal}> Sólo material de texto completo</Text>
         return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
         <Form
             ref='busquedaBasica'
@@ -145,7 +167,8 @@ class Basica extends Component {
                     <Text></Text>
                     <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                     <View><Text></Text></View>
-                    <InputField 
+                    <InputField
+                    style = {styles.textNormal} 
                     ref='busqueda' 
                     placeholder='Ingrese los términos de búsqueda'/>
                     <Modal
@@ -175,7 +198,9 @@ class Basica extends Component {
                     </View>
                     <Button 
                         style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
-                        textStyle={{fontSize: 20, color: 'white'}}>
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
                         Borrar
                     </Button>
                     </View>
@@ -183,7 +208,7 @@ class Basica extends Component {
                     <Text style = {styles.text}>Limitar material a:</Text>
                     <View><Text></Text></View>
                     <SwitchField 
-                    label=' Sólo material de texto completo'
+                    label= {textBox}
                     />
             </Form>
         </ScrollView>
@@ -213,8 +238,7 @@ const styles = StyleSheet.create({
     },
     textNormal: {
         color: 'black',
-		fontSize: 22,
-        fontWeight: 'bold',
+		fontSize: 18,
         paddingVertical: 15
     },
 	textWithIcon: {
@@ -245,6 +269,13 @@ const styles = StyleSheet.create({
         borderBottomWidth: 3,
         backgroundColor: 'gray'
     },
+    title: {
+        fontSize: 38,
+        backgroundColor: 'black'
+      },
+      button1: {
+        marginRight: 10
+      }
 })
 
 let formStyles = StyleSheet.create({
