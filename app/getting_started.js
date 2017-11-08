@@ -2,11 +2,42 @@ import React, { Component } from 'react';
 import { AppRegistry, Alert, Modal } from 'react-native';
 import AppIntro from 'react-native-app-intro';
 import Inicio from './index.js';
- 
-class GettingStarted extends Component {
-  onSkipBtnHandle = (index) => {
-      <Inicio/>
+import { Form,
+  Separator,InputField, LinkField,
+  SwitchField, PickerField,DatePickerField,TimePickerField
+ } from 'react-native-form-generator';
+
+export class ChildComponent extends Component{
+  render(){
+      return(
+          <Inicio/>
+      )
   }
+
+}
+
+class GettingStarted extends Component {
+  state = {
+    modalVisible: false
+  }
+
+  setModalVisible(visible) {
+        this.setState({modalVisible: visible});
+  }
+
+  onSkipBtnHandle = (index) => {
+        alert("¿Qué pasó amiwito? xDxDxD");
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.modalVisible}
+          onRequestClose={() => {this.setModalVisible(!this.state.modalVisible)}}
+          >
+          <Form>
+          <ChildComponent/>
+          </Form>
+         </Modal>
+      }
 
   doneBtnHandle = () => {
    

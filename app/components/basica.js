@@ -17,9 +17,9 @@ import { Form,
     SwitchField, PickerField,DatePickerField,TimePickerField
    } from 'react-native-form-generator';
 import { AppLoading, Asset, Font } from 'expo';
-import { FontAwesome } from '@expo/vector-icons';
-import { Card, ListItem, Button2 } from 'react-native-elements';
-import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome, FontFamily } from '@expo/vector-icons';
+import { Card, ListItem} from 'react-native-elements';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
@@ -66,10 +66,10 @@ export class ChildComponent extends Component{
                 <Card
                 title={res1}
                 >
-                <Text style={{marginBottom: 10, fontSize: 25, fontStyle: 'bold'}}>
+                <Text style={{marginBottom: 10}}>
                   Año: {res2}
                 </Text>
-                <Button2
+                <Button
                   icon={{name: 'code'}}
                   backgroundColor='#000066'
                   buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
