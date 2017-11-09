@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
-import {Dimensions,
-	StyleSheet,
-	View,
-	Text,
-	Image,
-	ScrollView,
-    TouchableHighlight,
-    Picker,
-	TextInput,
-    CheckBox,
-    Modal
-} from 'react-native';
+import {Dimensions, StyleSheet, View, Text, Image, ScrollView, TouchableHighlight, Picker, 
+    TextInput, CheckBox, Modal } from 'react-native';
 import {DrawerNavigator, StackNavigator} from 'react-navigation';
 import { Form,
     Separator,InputField, LinkField,
@@ -58,7 +48,6 @@ export class ChildComponent extends Component{
        
     }
 
-
         return(
                 <Form>
                 <Text style = {styles.textTitle}> {counter} Documentos encontrados</Text>
@@ -66,7 +55,7 @@ export class ChildComponent extends Component{
                 <Card
                 title={res1}
                 >
-                <Text style={{marginBottom: 10, fontSize: 25, fontStyle: 'bold'}}>
+                <Text style={{marginBottom: 10, fontSize: 25}}>
                   Año: {res2}
                 </Text>
                 <Button2
@@ -75,13 +64,9 @@ export class ChildComponent extends Component{
                   buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
                   title='Registro completo' />
               </Card>
-              </Form>
-            
-
-            
+              </Form>    
         );
     }
-
 }
 
 class Basica extends Component {
