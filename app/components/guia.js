@@ -4,7 +4,8 @@ import {Dimensions,
 	View,
 	Text,
 	ScrollView,
-    TouchableHighlight
+    TouchableHighlight,
+    Image
 } from 'react-native';
 import {DrawerNavigator, StackNavigator} from 'react-navigation';
 import { Form,
@@ -31,9 +32,7 @@ class Guia extends Component {
                     size = {24}
             />
         )
-      };
-
-      
+      };      
       
     render() {
         return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
@@ -41,6 +40,11 @@ class Guia extends Component {
                 <Text style = {styles.textTitle}> Guía de Usuario</Text>
                           
                 <Card title = "Busqueda Básica">
+                <Image
+                    style={styles.image}
+                    resizeMode="cover"
+                    source={require('../resources/guia/guia_1.jpg')}
+                />
                 <Text style={{marginBottom: 10, fontSize: 14}}>
                   Para acceder a la búsqueda básica, puedes utilizar el menú de navegación desplegable desde el boton de 
                   las barras laterales, ubicado en la parte superior izquierda de la aplicación.
@@ -86,9 +90,6 @@ const styles = StyleSheet.create({
         color: '#000066',
 		fontSize: 24
     }, 
-    picker: {
-        borderColor: '#000066'
-    },
     switch: {
         backgroundColor: '#000066'
     },
@@ -109,9 +110,6 @@ const styles = StyleSheet.create({
         fontSize: 38,
         backgroundColor: 'black'
       },
-      button1: {
-        marginRight: 10
-      }
 })
 
 let formStyles = StyleSheet.create({
