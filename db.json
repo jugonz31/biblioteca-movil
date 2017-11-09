@@ -1,4 +1,5 @@
-[
+{ 
+    "books": [
     {
     "_id": "1",
     "datestamp": "19000101",
@@ -51,3 +52,4 @@
     "coverage": "Ej.1 Vol.0/Formato: IMPRESO/ Colección: LITERATURA Y BIOGRAFIAS/DiasPréstamo:15 DÍAS / Ubicación:MEDELLÍN SEGUNDO PISO."
     }
 ]
+}
