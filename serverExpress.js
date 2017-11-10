@@ -6,7 +6,7 @@ var methodOverride = require ('method-override');
 var app = express();
 
 // Conexión a la base de datos - MongoDB
-db.connect('mongodb://mongodb://biblioteca:bibliotecamovil7@ds149495.mlab.com:49495/biblioteca-movil/books', function(err, res){
+db.connect("mongodb://biblioteca:bibliotecamovil7@ds149495.mlab.com:49495/biblioteca-movil", function(err, res){
   if (err) { 
     console.log (err);
   } else {
@@ -26,7 +26,7 @@ var Book = require('./controllers/books');
 var router = express.Router();
 // Index - Route
 app.get('/', function(req, res) { 
- res.send("Biblioteca Móvil EAFIT");
+ res.send("El mago lo hizo otra vez xDxDxD");
 });
 
 app.use(router);
