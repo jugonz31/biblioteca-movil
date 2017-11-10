@@ -20,55 +20,59 @@ var textInput = "";
 var textInputClean = "";
 var titulo = "";
 var todos = "";
-var counter;
+var counter = 3;
 
 export class ChildComponent extends Component{
     render(){
-        if(this.props.result){
-            
-            var res1 = this.props.result.map((item, i) => {
-                if(textInput == item.title){
+    if(this.props.result){
+        var res = this.props.result.map((item, i) => {
+            if(textInput == item.library){
                 return(
-                    <Text 
-                    style = {styles.textNormal}
-                    key = {i}>{item.title}</Text>
-                )
-               
-            }
-            counter++;
-        })
-            var res2 = this.props.result.map((item, i) => {
-                if(textInput == item.title){
-                return(
-                    <Text 
-                    style = {styles.textNormal}
-                    key = {i}>{item.releaseYear}</Text>
+                <Card key = {i}
+                    title = {item.title}
+                >
+                <Text style={}>ID: {item._id}</Text>
+                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Subject: {item.subject}</Text>
+                <Text style={styles.textCard}>Library: {item.library}</Text>
+                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Tipo: {item.type}</Text>
+                <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
+                <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
+                <Text style={styles.textCard}>Idioma: {item.language}</Text>
+                <Text style={styles.textCard}>Descripción: {item.description}</Text>
+                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
+                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
+                <View>
+                <Button 
+                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
+                        Registro completo
+                </Button>
+                </View>
+            </Card>  
                 )
             }})
-       
-    }
-
+        
+        }
         return(
                 <Form>
-                <Text style = {styles.textTitle}> {counter} Documentos encontrados</Text>
-                          
-                <Card
-                title={res1}
-                >
-                <Text style={{marginBottom: 10}}>
-                  Año: {res2}
-                </Text>
-                <Button
-                  icon={{name: 'code'}}
-                  backgroundColor='#000066'
-                  buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                  title='Registro completo' />
-              </Card>
-              </Form>    
-        );
-    }
-}
-
+                    <ScrollView>
+                        <View>
+                            <Text style = {styles.textTitle}>    {counter} documentos encontrados</Text>
+                        </View>
+                        {res}
+                    </ScrollView>
+                </Form>    
+                )
+            }
+        }
+            
+            
 class Basica extends Component {
     
     static navigationOptions = {
@@ -88,11 +92,11 @@ class Basica extends Component {
       }
 
       componentDidMount(){
-          fetch('https://facebook.github.io/react-native/movies.json')
+          fetch('https://my-json-server.typicode.com/jugonz31/biblioteca-movil/db')
           .then((response) => response.json())
           .then((responseJson) => {
               this.setState({
-                  data: responseJson.movies
+                  data: responseJson.books
               })
           })
       }
@@ -210,6 +214,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: '#E0E0E0',
         borderBottomWidth: 1        
+    },
+    textCard: {
+        marginBottom: 10, 
+        fontSize: 18, 
+        fontWeight: 'bold'
     },
     text: {
 		color: '#000066',
