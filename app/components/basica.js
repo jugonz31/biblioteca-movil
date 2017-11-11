@@ -20,18 +20,22 @@ var textInput = "";
 var textInputClean = "";
 var titulo = "";
 var todos = "";
-var counter = 3;
+var count = 0;
 
 export class ChildComponent extends Component{
     render(){
     if(this.props.result){
         var res = this.props.result.map((item, i) => {
+           if(textPicker == "todos"){ 
             if(textInput == item.library){
+                count++;
+                alert(textPicker);
                 return(
                 <Card key = {i}
-                    title = {item.title}
+                    titleStyle={styles.textCardTitle}
+                    title={item.title}
                 >
-                <Text style={}>ID: {item._id}</Text>
+                <Text style={styles.textCard}>ID: {item._id}</Text>
                 <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
                 <Text style={styles.textCard}>Creador: {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
@@ -56,14 +60,51 @@ export class ChildComponent extends Component{
                 </View>
             </Card>  
                 )
-            }})
-        
+            }
+         }else if(textPicker == "titulo"){ 
+            if(textInput == item.title){
+                count++;
+                alert(textPicker);
+                return(
+                <Card key = {i}
+                    titleStyle={styles.textCardTitle}
+                    title={item.title}
+                >
+                <Text style={styles.textCard}>ID: {item._id}</Text>
+                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Subject: {item.subject}</Text>
+                <Text style={styles.textCard}>Library: {item.library}</Text>
+                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Tipo: {item.type}</Text>
+                <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
+                <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
+                <Text style={styles.textCard}>Idioma: {item.language}</Text>
+                <Text style={styles.textCard}>Descripción: {item.description}</Text>
+                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
+                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
+                <View>
+                <Button 
+                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
+                        Registro completo
+                </Button>
+                </View>
+            </Card>  
+                )
+            }
+        }
+        })
+        //count = 0;
         }
         return(
                 <Form>
                     <ScrollView>
                         <View>
-                            <Text style = {styles.textTitle}>    {counter} documentos encontrados</Text>
+                            <Text style = {styles.textTitle}>{count} documentos encontrados</Text>
                         </View>
                         {res}
                     </ScrollView>
@@ -102,7 +143,10 @@ class Basica extends Component {
       }
     
       setModalVisible(visible) {
-        if(textInput != ""){
+        if(textPicker == undefined){
+            alert("Seleccione un filtro de búsqueda");
+        }
+        else if(textInput != ""){
             this.setState({modalVisible: visible});
         }else{
             this.setState({modalVisible: !visible});
@@ -114,10 +158,11 @@ class Basica extends Component {
      
         this.setState({formData:formData})
         this.props.onFormChange && this.props.onFormChange(formData);
-        textInput = formData.busqueda;
+        textInput = String(formData.busqueda);
         textPicker = formData.busquedapor;
         titulo = formData.Título;
         todos = formData.Todos;
+        count = 0;
       }
       handleFormFocus(e, component){
        
@@ -144,6 +189,7 @@ class Basica extends Component {
                         iconRight={<FontAwesome name='angle-right'size={25}/>} 
                         ref='busquedapor'
                         options={{
+                        undefined: 'Seleccione el filtro de búsqueda',  
                         todos: 'Todos',
                         autor: 'Autor',
                         isbn: 'ISBN / ISSN',
@@ -217,7 +263,12 @@ const styles = StyleSheet.create({
     },
     textCard: {
         marginBottom: 10, 
-        fontSize: 18, 
+        fontSize: 14, 
+        //fontWeight: 'bold'
+    },
+    textCardTitle: {
+        marginBottom: 10, 
+        fontSize: 16, 
         fontWeight: 'bold'
     },
     text: {
@@ -228,7 +279,8 @@ const styles = StyleSheet.create({
         color: '#000066',
 		fontSize: 25,
         fontWeight: 'bold',
-        paddingVertical: 15
+        paddingVertical: 15,
+        alignItems: 'center'
     },
     textNormal: {
         color: 'black',
