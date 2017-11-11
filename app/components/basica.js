@@ -29,7 +29,7 @@ export class ChildComponent extends Component{
            if(textPicker == "todos"){ 
             if(textInput == item.library){
                 count++;
-                alert(textPicker);
+                //alert(textPicker);
                 return(
                 <Card key = {i}
                     titleStyle={styles.textCardTitle}
@@ -49,7 +49,7 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
                 <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
-                <View>
+                <View style ={{alignItems: 'center'}}>
                 <Button 
                         style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
                         textStyle={{fontSize: 20, color: 'white'}}
@@ -64,7 +64,217 @@ export class ChildComponent extends Component{
          }else if(textPicker == "titulo"){ 
             if(textInput == item.title){
                 count++;
-                alert(textPicker);
+                //alert(textPicker);
+                return(
+                <Card key = {i}
+                    titleStyle={styles.textCardTitle}
+                    title={item.title}
+                >
+                <Text style={styles.textCard}>ID: {item._id}</Text>
+                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Subject: {item.subject}</Text>
+                <Text style={styles.textCard}>Library: {item.library}</Text>
+                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Tipo: {item.type}</Text>
+                <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
+                <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
+                <Text style={styles.textCard}>Idioma: {item.language}</Text>
+                <Text style={styles.textCard}>Descripción: {item.description}</Text>
+                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
+                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
+                <View>
+                <Button 
+                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
+                        Registro completo
+                </Button>
+                </View>
+            </Card>  
+                )
+            }
+        } else if(textPicker == "autor"){ 
+            if(textInput == item.creator){
+                count++;
+                //alert(textPicker);
+                return(
+                <Card key = {i}
+                    titleStyle={styles.textCardTitle}
+                    title={item.title}
+                >
+                <Text style={styles.textCard}>ID: {item._id}</Text>
+                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Subject: {item.subject}</Text>
+                <Text style={styles.textCard}>Library: {item.library}</Text>
+                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Tipo: {item.type}</Text>
+                <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
+                <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
+                <Text style={styles.textCard}>Idioma: {item.language}</Text>
+                <Text style={styles.textCard}>Descripción: {item.description}</Text>
+                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
+                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
+                <View>
+                <Button 
+                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
+                        Registro completo
+                </Button>
+                </View>
+            </Card>  
+                )
+            }
+        } else if(textPicker == "isbn"){ 
+            if(textInput == item.isbn){
+                count++;
+                //alert(textPicker);
+                return(
+                <Card key = {i}
+                    titleStyle={styles.textCardTitle}
+                    title={item.title}
+                >
+                <Text style={styles.textCard}>ID: {item._id}</Text>
+                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Subject: {item.subject}</Text>
+                <Text style={styles.textCard}>Library: {item.library}</Text>
+                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Tipo: {item.type}</Text>
+                <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
+                <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
+                <Text style={styles.textCard}>Idioma: {item.language}</Text>
+                <Text style={styles.textCard}>Descripción: {item.description}</Text>
+                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
+                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
+                <View>
+                <Button 
+                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
+                        Registro completo
+                </Button>
+                </View>
+            </Card>  
+                )
+            }
+        } else if(textPicker == "editorial"){ 
+            if(textInput == item.publisher){
+                count++;
+                //alert(textPicker);
+                return(
+                <Card key = {i}
+                    titleStyle={styles.textCardTitle}
+                    title={item.title}
+                >
+                <Text style={styles.textCard}>ID: {item._id}</Text>
+                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Subject: {item.subject}</Text>
+                <Text style={styles.textCard}>Library: {item.library}</Text>
+                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Tipo: {item.type}</Text>
+                <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
+                <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
+                <Text style={styles.textCard}>Idioma: {item.language}</Text>
+                <Text style={styles.textCard}>Descripción: {item.description}</Text>
+                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
+                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
+                <View>
+                <Button 
+                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
+                        Registro completo
+                </Button>
+                </View>
+            </Card>  
+                )
+            }
+        } else if(textPicker == "tema_materia"){ 
+            if(textInput == item.subject){
+                count++;
+                //alert(textPicker);
+                return(
+                <Card key = {i}
+                    titleStyle={styles.textCardTitle}
+                    title={item.title}
+                >
+                <Text style={styles.textCard}>ID: {item._id}</Text>
+                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Subject: {item.subject}</Text>
+                <Text style={styles.textCard}>Library: {item.library}</Text>
+                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Tipo: {item.type}</Text>
+                <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
+                <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
+                <Text style={styles.textCard}>Idioma: {item.language}</Text>
+                <Text style={styles.textCard}>Descripción: {item.description}</Text>
+                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
+                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
+                <View>
+                <Button 
+                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
+                        Registro completo
+                </Button>
+                </View>
+            </Card>  
+                )
+            }
+        } else if(textPicker == "titulo_revista"){ 
+            if(textInput == item.description){
+                count++;
+                //alert(textPicker);
+                return(
+                <Card key = {i}
+                    titleStyle={styles.textCardTitle}
+                    title={item.title}
+                >
+                <Text style={styles.textCard}>ID: {item._id}</Text>
+                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Subject: {item.subject}</Text>
+                <Text style={styles.textCard}>Library: {item.library}</Text>
+                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Tipo: {item.type}</Text>
+                <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
+                <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
+                <Text style={styles.textCard}>Idioma: {item.language}</Text>
+                <Text style={styles.textCard}>Descripción: {item.description}</Text>
+                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
+                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
+                <View>
+                <Button 
+                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
+                        Registro completo
+                </Button>
+                </View>
+            </Card>  
+                )
+            }
+        } else if(textPicker == "serie"){ 
+            if(textInput == item.description){
+                count++;
+                //alert(textPicker);
                 return(
                 <Card key = {i}
                     titleStyle={styles.textCardTitle}
@@ -97,13 +307,14 @@ export class ChildComponent extends Component{
                 )
             }
         }
+
         })
         //count = 0;
         }
         return(
                 <Form>
                     <ScrollView>
-                        <View>
+                        <View style ={{alignItems: 'center'}}>
                             <Text style = {styles.textTitle}>{count} documentos encontrados</Text>
                         </View>
                         {res}
