@@ -26,7 +26,7 @@ var Book = require('./controllers/books');
 var router = express.Router();
 // Index - Route
 app.get('/', function(req, res) { 
- res.send("Biblioteca Móvil EAFIT - Proyecto Integrador 1");
+ res.send("El mago lo hizo otra vez xDxDxD");
 });
 
 app.use(router);
