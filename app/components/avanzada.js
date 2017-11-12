@@ -59,6 +59,7 @@
       
         }
       render() {
+        var textBox = <Text style = {styles.textNormal}> Sólo material de texto completo</Text>
           return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
           <Form
               ref='busquedaAvanzada'
@@ -306,7 +307,7 @@
 
                       <View><Text></Text></View>
                       <SwitchField 
-                      label=' Sólo material de texto completo'
+                      label={textBox}
                       />
               </Form>
           </ScrollView>
@@ -332,6 +333,11 @@
         color: '#000066',
 		fontSize: 25,
         fontWeight: 'bold',
+        paddingVertical: 15
+    },
+    textNormal: {
+        color: 'black',
+		fontSize: 18,
         paddingVertical: 15
     },
     textWithIcon: {

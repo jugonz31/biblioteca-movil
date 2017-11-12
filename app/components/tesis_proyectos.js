@@ -60,6 +60,13 @@ class Tesis_Proyectos extends Component {
      
       }
     render() {
+        var textBox = <Text style = {styles.textNormal}> Limitar material a texto completo</Text>
+        var textBox1 = <Text style = {styles.textNormal}>Escuela de Administración</Text>
+        var textBox2 = <Text style = {styles.textNormal}>Escuela de Ingenierías</Text>
+        var textBox3 = <Text style = {styles.textNormal}>Escuela de Ciencias</Text>
+        var textBox4 = <Text style = {styles.textNormal}>Escuela de Humanidades</Text>
+        var textBox5 = <Text style = {styles.textNormal}>Escuela de Derecho</Text>
+        var textBox6 = <Text style = {styles.textNormal}>Escuela de Economía y Finanzas</Text>
         return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
         <Form
             ref='busquedatesis_proyectos'
@@ -74,7 +81,7 @@ class Tesis_Proyectos extends Component {
                     <InputField ref=' busquedatesis' placeholder='(YYYY)'/>
                     <Text></Text>
                     <SwitchField 
-                    label=' Limitar material a texto completo'
+                    label={textBox}
                     />
                     <View><Text></Text></View>
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
@@ -94,7 +101,7 @@ class Tesis_Proyectos extends Component {
                     <Text style = {styles.text}>Seleccione el área en que desea realizar la búsqueda:</Text>
                     <Text></Text>
                     <PickerField ref='areaAdministracion'
-                        label='Escuela de Administración'
+                        label={textBox1}
                         options={{
                             ea1: 'Administración de Negocios (pregrado)',
                             ea2: 'Especialización en Administración de Riesgos y Seguros',
@@ -112,7 +119,7 @@ class Tesis_Proyectos extends Component {
                     }}/>
                     <Text></Text>
                     <PickerField ref='areaIngenierias'
-                        label='Escuela de Ingenierías'
+                        label={textBox2}
                         options={{
                             ei1: 'Ingeniería Civil (pregrado)',
                             ei2: 'Ingeniería de Diseño de Producto (pregrado)',
@@ -130,7 +137,7 @@ class Tesis_Proyectos extends Component {
                     }}/>
                     <Text></Text>
                     <PickerField ref='areaCiencias'
-                        label='Escuela de Ciencias'
+                        label={textBox3}
                         options={{
                             ec1: 'Biología (pregrado)',
                             ec2: 'Ingeniería Física (pregrado)',
@@ -144,7 +151,7 @@ class Tesis_Proyectos extends Component {
                     }}/>
                     <Text></Text>
                     <PickerField ref='areaHumanidades'
-                        label='Escuela de Humanidades'
+                        label={textBox4}
                         options={{
                             eh1: 'Ciencias políticas (pregrado)',
                             eh2: 'Comunicación Social (pregrado)',
@@ -162,14 +169,14 @@ class Tesis_Proyectos extends Component {
                     }}/>
                     <Text></Text>
                     <PickerField ref='areaDerecho'
-                        label='Escuela de Derecho'
+                        label={textBox5}
                         options={{
                             ed1: 'Derecho (pregrado)',
                             ed2: 'Maestría en Derecho Penal'
                     }}/>
                     <Text></Text>
                     <PickerField ref='areaEconomía'
-                        label='Escuela de Economía y Finanzas'
+                        label={textBox6}
                         options={{
                             eef1: 'Economía (pregrado)',
                             eef2: 'Especialización en Economía',
@@ -202,6 +209,11 @@ const styles = StyleSheet.create({
         color: '#000066',
 		fontSize: 25,
         fontWeight: 'bold',
+        paddingVertical: 15
+    },
+    textNormal: {
+        color: '#000066',
+		fontSize: 18,
         paddingVertical: 15
     },
 	textWithIcon: {

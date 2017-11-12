@@ -29,7 +29,6 @@ export class ChildComponent extends Component{
            if(textPicker == "todos"){ 
             if(textInput == item.library){
                 count++;
-                //alert(textPicker);
                 return(
                 <Card key = {i}
                     titleStyle={styles.textCardTitle}
@@ -53,7 +52,7 @@ export class ChildComponent extends Component{
                 <Button 
                         style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
                         textStyle={{fontSize: 20, color: 'white'}}
-                        onPress={() => {this.handleFormChange("")}}
+                        onPress={() => {this.setModalVisible1(true)}}
                         >
                         Registro completo
                 </Button>
@@ -315,14 +314,14 @@ export class ChildComponent extends Component{
                 <Form>
                     <ScrollView>
                         <View style ={{alignItems: 'center'}}>
-                            <Text style = {styles.textTitle}>{count} documentos encontrados</Text>
+                            <Text style = {styles.textTitle}> {count} documentos encontrados</Text>
                         </View>
                         {res}
                     </ScrollView>
                 </Form>    
                 )
             }
-        }
+}
             
             
 class Basica extends Component {
@@ -397,7 +396,6 @@ class Basica extends Component {
             <Text></Text>
             <PickerField 
                         style = {styles.picker}
-                        iconRight={<FontAwesome name='angle-right'size={25}/>} 
                         ref='busquedapor'
                         options={{
                         undefined: 'Seleccione el filtro de búsqueda',  
@@ -409,7 +407,16 @@ class Basica extends Component {
                         titulo: 'Título',
                         titulo_revista: 'Títulos de Revistas',
                         serie: 'Serie'                    
-                    }}/>
+                        }}
+                        iconRight={
+                            <FontAwesome name='search'
+                            size={30}
+                  
+                            style={[
+                              formStyles.alignRight,{color: '#C7C7CC'},
+                              this.props.iconStyle]}/>
+                        }
+                    />
                     <Text></Text>
                     <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                     <View><Text></Text></View>
