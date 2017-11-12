@@ -61,7 +61,8 @@ export class ChildComponent extends Component{
                 )
             }
          }else if(textPicker == "titulo"){ 
-            if(textInput == item.title){
+            var str = item.title.toLowerCase();
+            if(str.indexOf(textInput.toLowerCase()) != -1){
                 count++;
                 //alert(textPicker);
                 return(
