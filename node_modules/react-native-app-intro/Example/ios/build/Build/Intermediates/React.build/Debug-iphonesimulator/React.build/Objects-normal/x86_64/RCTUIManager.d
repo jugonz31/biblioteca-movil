@@ -1,0 +1,37 @@
+dependencies: \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Modules/RCTUIManager.m \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Modules/RCTUIManager.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTJavaScriptExecutor.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTViewManager.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Layout/Layout.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Modules/RCTAccessibilityManager.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTComponentData.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTModuleData.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTModuleMethod.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTBridgeMethod.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTNullability.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTRootView.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTRootShadowView.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTShadowView.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTRootViewInternal.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTScrollableProtocol.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/RCTView.h \
+  /Users/FuD/Projects/react-native-app-intro/Example/node_modules/react-native/React/Views/UIView+React.h
