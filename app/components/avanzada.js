@@ -83,6 +83,7 @@
                                   this.props.iconStyle]}/>
                           }
                           options={{
+                          undefined: 'Seleccione el filtro de búsqueda',
                           todos: 'Todos',
                           autor: 'Autor',
                           isbn: 'ISBN / ISSN',
@@ -97,108 +98,7 @@
                       <View><Text></Text></View>
                       <InputField ref=' busquedaUno' placeholder=' Ingrese los términos de búsqueda'/>
                       <View><Text></Text></View>
-                      <PickerField 
-                          style = {styles.picker} 
-                          ref='logicaUno'
-                          iconRight={
-                              <FontAwesome 
-                              name='angle-right'
-                              size={24}
-                              style={[
-                                  formStyles.alignRight,{color: '#000066'},
-                                  this.props.iconStyle]}/>
-                          }
-                          options={{
-                          y : 'Y',
-                          o : 'O'                    
-                      }}/> 
-              <Text style = {styles.text}>Búsqueda por:</Text>
-              <Text></Text>
-              <PickerField 
-                          style = {styles.picker} 
-                          ref='busquedaporDos'
-                          iconRight={
-                              <FontAwesome 
-                              name='angle-right'
-                              size={24}
-                              style={[
-                                  formStyles.alignRight,{color: '#000066'},
-                                  this.props.iconStyle]}/>
-                          }
-                          options={{
-                          autor: 'Autor',
-                          todos: 'Todos',                          
-                          isbn: 'ISBN / ISSN',
-                          editorial: 'Editorial',
-                          tema_materia: 'Tema / Materias',
-                          titulo: 'Título',
-                          titulo_revista: 'Títulos de Revistas',
-                          serie: 'Serie',                    
-                      }}/> 
-                      <Text></Text>
-                      <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
-                      <View><Text></Text></View>
-                      <InputField ref=' busquedaDos' placeholder=' Ingrese los términos de búsqueda'/>
-                      <View><Text></Text></View>
-                      <PickerField 
-                          style = {styles.picker} 
-                          ref='logicaDos'
-                          iconRight={
-                              <FontAwesome 
-                              name='angle-right'
-                              size={24}
-                              style={[
-                                  formStyles.alignRight,{color: '#000066'},
-                                  this.props.iconStyle]}/>
-                          }
-                          options={{
-                          y : 'Y',
-                          o : 'O'                    
-                      }}/> 
-                      <Text style = {styles.text}>Búsqueda por:</Text>
-              <Text></Text>
-              <PickerField 
-                          style = {styles.picker} 
-                          ref='busquedaporTres'
-                          iconRight={
-                              <FontAwesome 
-                              name='angle-right'
-                              size={24}
-                              style={[
-                                  formStyles.alignRight,{color: '#000066'},
-                                  this.props.iconStyle]}/>
-                          }
-                          options={{
-                          isbn: 'ISBN / ISSN',
-                          todos: 'Todos',
-                          autor: 'Autor',
-                          editorial: 'Editorial',
-                          tema_materia: 'Tema / Materias',
-                          titulo: 'Título',
-                          titulo_revista: 'Títulos de Revistas',
-                          serie: 'Serie',                    
-                      }}/> 
-                      <Text></Text>
-                      <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
-                      <View><Text></Text></View>
-                      <InputField ref='busquedaTres' placeholder=' Ingrese los términos de búsqueda'/>
-                      <View><Text></Text></View>
-                      <PickerField 
-                          style = {styles.picker} 
-                          ref='logicaTres'
-                          iconRight={
-                              <FontAwesome 
-                              name='angle-right'
-                              size={24}
-                              style={[
-                                  formStyles.alignRight,{color: '#000066'},
-                                  this.props.iconStyle]}/>
-                          }
-                          options={{
-                          y : 'Y',
-                          o : 'O'                    
-                      }}/> 
-                      <View><Text></Text></View>
+
                       <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
                   alignItems: 'center'}}>
                       <Button 
@@ -213,7 +113,7 @@
                       </Button>
                       </View>
                       <View><Text></Text></View>
-                      <Text style = {styles.text}>Limitar material a:</Text>
+                      <Text style = {styles.textTitle}>Limitar material a:</Text>
                       <View><Text></Text></View>
                       <Text style = {styles.text}>Tipo de material: </Text>
                       <PickerField 
@@ -228,6 +128,7 @@
                                   this.props.iconStyle]}/>
                           }
                           options={{
+                          undefined: 'Seleccione el tipo de material',
                           todos : 'Todos',
                           articulos : 'Artículos',
                           historicos : 'Archivos/Documentos Históricos',
@@ -265,6 +166,7 @@
                                   this.props.iconStyle]}/>
                           }
                           options={{
+                          undefined: 'Seleccione la ubicación',
                           todas : 'Todas',
                           medellin : 'Medellín',
                           salapatrimonial : 'Medellín - Sala Patrimonial',
@@ -286,6 +188,7 @@
                                   this.props.iconStyle]}/>
                           }
                           options={{
+                          undefined: 'Seleccione el idioma',
                           espanol : 'Español',
                           aleman : 'Alemán',
                           catalan : 'Catalán',
