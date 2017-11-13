@@ -357,11 +357,11 @@ class Basica extends Component {
       }
 
       componentDidMount(){
-          fetch('https://my-json-server.typicode.com/jugonz31/biblioteca-movil/db')
+          fetch('https://raw.githubusercontent.com/jugonz31/biblioteca-movil/master/books1.json')
           .then((response) => response.json())
           .then((responseJson) => {
               this.setState({
-                  data: responseJson.books
+                  data: responseJson
               })
           })
       }
