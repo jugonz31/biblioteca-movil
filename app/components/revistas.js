@@ -83,6 +83,7 @@ class Revistas extends Component {
                                 this.props.iconStyle]}/>
                         }
                         options={{
+                        undefined: 'Seleccione el filtro de búsqueda',
                         titulo: 'Título de publicación',
                         issn: 'ISSN',
                         pe: 'Publicador/Editor'                

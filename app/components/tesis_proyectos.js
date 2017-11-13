@@ -61,12 +61,6 @@ class Tesis_Proyectos extends Component {
       }
     render() {
         var textBox = <Text style = {styles.textNormal}> Limitar material a texto completo</Text>
-        var textBox1 = <Text style = {styles.textNormal}>Escuela de Administración</Text>
-        var textBox2 = <Text style = {styles.textNormal}>Escuela de Ingenierías</Text>
-        var textBox3 = <Text style = {styles.textNormal}>Escuela de Ciencias</Text>
-        var textBox4 = <Text style = {styles.textNormal}>Escuela de Humanidades</Text>
-        var textBox5 = <Text style = {styles.textNormal}>Escuela de Derecho</Text>
-        var textBox6 = <Text style = {styles.textNormal}>Escuela de Economía y Finanzas</Text>
         return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
         <Form
             ref='busquedatesis_proyectos'
@@ -100,91 +94,16 @@ class Tesis_Proyectos extends Component {
                     <View><Text></Text></View>
                     <Text style = {styles.text}>Seleccione el área en que desea realizar la búsqueda:</Text>
                     <Text></Text>
-                    <PickerField ref='areaAdministracion'
-                        label={textBox1}
+                    <PickerField ref='area'
                         options={{
-                            ea1: 'Administración de Negocios (pregrado)',
-                            ea2: 'Especialización en Administración de Riesgos y Seguros',
-                            ea3: 'Especialización en Negocios Internacionales',
-                            ea4: 'Especialización en Organización Industrial y Regulación Económica',
-                            ea5: 'Maestría en Administración (MBA)',
-                            ea6: 'Maestría en Ciencias de la Administración',
-                            ea7: 'Maestría en Desarrollo Humano Organizacional',
-                            ea8: 'Maestría en Gerencia de Proyectos',
-                            ea9: 'Maestría en Negocios Internacionales',
-                            ea10: 'Maestría en Mercadeo',
-                            ea11: 'Doctorado en Administración',
-                            ea12: 'Especialización en Administración de Riesgos y Seguros',
-                            ea13: 'Especialización en Administración de Riesgos y Seguros'
+                            ea: 'Escuela de Administración',
+                            ei: 'Escuela de Ingenierías',
+                            ec: 'Escuela de Ciencias',
+                            eh: 'Escuela de Humanidades',
+                            ed: 'Escuela de Derecho',
+                            eef: 'Escuela de Economía y Finanzas',
                     }}/>
                     <Text></Text>
-                    <PickerField ref='areaIngenierias'
-                        label={textBox2}
-                        options={{
-                            ei1: 'Ingeniería Civil (pregrado)',
-                            ei2: 'Ingeniería de Diseño de Producto (pregrado)',
-                            ei3: 'Ingeniería de Procesos (pregrado)',
-                            ei4: 'Ingeniería de Producción (pregrado)',
-                            ei5: 'Ingeniería de Sistemas (pregrado)',
-                            ei6: 'Ingeniería Mecanica (pregrado)',
-                            ei7: 'Especialización en Diseño Mecánico',
-                            ei8: 'Maestría en Ingenierías',
-                            ei9: 'Maestría en Ingeniería Mecanica',
-                            ei10: 'Maestría en Ingeniería Informatica',
-                            ei11: 'Doctorado en Ingeniería',
-                            ei12: 'Especialización en Administración de Riesgos y Seguros',
-                            ei13: 'Especialización en Administración de Riesgos y Seguros'
-                    }}/>
-                    <Text></Text>
-                    <PickerField ref='areaCiencias'
-                        label={textBox3}
-                        options={{
-                            ec1: 'Biología (pregrado)',
-                            ec2: 'Ingeniería Física (pregrado)',
-                            ec3: 'Ingeniería Matemática (pregrado)',
-                            ec4: 'Geología (pregrado)',
-                            ec5: 'Maestría en Matematicas Aplicadas',
-                            ec6: 'Maestría en Ciencias de la Tierra',
-                            ec7: 'Maestría en Física Aplicada',
-                            ec8: 'Doctorado en Ingeniería Matemática',
-                            ec9: 'Doctorado en Ciencias de la Tierra'
-                    }}/>
-                    <Text></Text>
-                    <PickerField ref='areaHumanidades'
-                        label={textBox4}
-                        options={{
-                            eh1: 'Ciencias políticas (pregrado)',
-                            eh2: 'Comunicación Social (pregrado)',
-                            eh3: 'Psicología (pregrado)',
-                            eh4: 'Especialización en Estudios Políticos',
-                            eh5: 'Especialización en Estudios Urbanos',
-                            eh6: 'Especialización en Hermenéutica Literaria',
-                            eh7: 'Especialización en Lógica y Filosofía',
-                            eh8: 'Maestría en Estudios Humanísticos',
-                            eh9: 'Maestría en Hermenéutica Literaria',
-                            eh10: 'Maestría en Música',
-                            eh11: 'Maestría en Gobierno y Políticas Públicas',
-                            eh12: 'Maestría en Procesos Urbanos y Ambientales',
-                            eh13: 'Doctorado en Humanidades'
-                    }}/>
-                    <Text></Text>
-                    <PickerField ref='areaDerecho'
-                        label={textBox5}
-                        options={{
-                            ed1: 'Derecho (pregrado)',
-                            ed2: 'Maestría en Derecho Penal'
-                    }}/>
-                    <Text></Text>
-                    <PickerField ref='areaEconomía'
-                        label={textBox6}
-                        options={{
-                            eef1: 'Economía (pregrado)',
-                            eef2: 'Especialización en Economía',
-                            eef3: 'Maestría en Administración Financiera',
-                            eef4: 'Maestría en Economía',
-                            eef5: 'Maestría en Finanzas',
-                            eef6: 'Maestría en Economía Aplicada'
-                    }}/>
             </Form>
         </ScrollView>
         );
