@@ -27,8 +27,14 @@ export class ChildComponent extends Component{
     if(this.props.result){
         var res = this.props.result.map((item, i) => {
            if(textPicker == "todos"){ 
-            var str1 = item.library.toLowerCase();
-            if(str1.indexOf(textInput.toLowerCase())){
+            var strt1 = item.library.toLowerCase();
+            var strt2 = item.title.toLowerCase();
+            var strt3 = item.creator.toLowerCase();
+            var strt4 = item.publisher.toLowerCase();
+            if(strt1.indexOf(textInput.toLowerCase()) != -1 
+            || strt2.indexOf(textInput.toLowerCase()) != -1
+            || strt3.indexOf(textInput.toLowerCase()) != -1
+            || strt4.indexOf(textInput.toLowerCase()) != -1){
                 count++;
                 return(
                 <Card key = {i}
@@ -62,8 +68,8 @@ export class ChildComponent extends Component{
                 )
             }
          }else if(textPicker == "titulo"){ 
-            var str2 = item.library.toLowerCase();
-            if(str2.indexOf(textInput.toLowerCase())){
+            var str2 = item.title.toLowerCase();
+            if(str2.indexOf(textInput.toLowerCase()) != -1){
                 count++;
                 //alert(textPicker);
                 return(
@@ -98,8 +104,8 @@ export class ChildComponent extends Component{
                 )
             }
         } else if(textPicker == "autor"){ 
-            var str3 = item.library.toLowerCase();
-            if(str3.indexOf(textInput.toLowerCase())){
+            var str3 = item.creator.toLowerCase();
+            if(str3.indexOf(textInput.toLowerCase()) != -1){
                 count++;
                 //alert(textPicker);
                 return(
@@ -134,8 +140,8 @@ export class ChildComponent extends Component{
                 )
             }
         } else if(textPicker == "isbn"){ 
-            var str4 = item.library.toLowerCase();
-            if(str4.indexOf(textInput.toLowerCase())){
+            var str4 = item.isbn.toLowerCase();
+            if(str4.indexOf(textInput.toLowerCase()) != -1){
                 count++;
                 //alert(textPicker);
                 return(
@@ -170,8 +176,8 @@ export class ChildComponent extends Component{
                 )
             }
         } else if(textPicker == "editorial"){ 
-            var str5 = item.library.toLowerCase();
-            if(str5.indexOf(textInput.toLowerCase())){
+            var str5 = item.editorial.toLowerCase();
+            if(str5.indexOf(textInput.toLowerCase()) != -1){
                 count++;
                 //alert(textPicker);
                 return(
@@ -206,8 +212,8 @@ export class ChildComponent extends Component{
                 )
             }
         } else if(textPicker == "tema_materia"){ 
-            var str6 = item.library.toLowerCase();
-            if(str6.indexOf(textInput.toLowerCase())){
+            var str6 = item.subject.toLowerCase();
+            if(str6.indexOf(textInput.toLowerCase()) != -1){
                 count++;
                 //alert(textPicker);
                 return(
@@ -242,8 +248,8 @@ export class ChildComponent extends Component{
                 )
             }
         } else if(textPicker == "titulo_revista"){ 
-            var str7 = item.library.toLowerCase();
-            if(str7.indexOf(textInput.toLowerCase())){
+            var str7 = item.description.toLowerCase();
+            if(str7.indexOf(textInput.toLowerCase()) != -1){
                 count++;
                 //alert(textPicker);
                 return(
@@ -278,8 +284,8 @@ export class ChildComponent extends Component{
                 )
             }
         } else if(textPicker == "serie"){ 
-            var str8 = item.library.toLowerCase();
-            if(str8.indexOf(textInput.toLowerCase())){
+            var str8 = item.clasification.toLowerCase();
+            if(str8.indexOf(textInput.toLowerCase()) != -1){
                 count++;
                 //alert(textPicker);
                 return(
