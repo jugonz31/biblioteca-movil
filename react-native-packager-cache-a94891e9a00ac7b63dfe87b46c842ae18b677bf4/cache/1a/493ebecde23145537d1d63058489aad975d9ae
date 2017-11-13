@@ -1,0 +1,54 @@
+
+'use strict';
+
+var _jsxFileName = '/home/stiven/BibliotecaMovil/node_modules/react-native/Libraries/Image/ImageBackground.js';
+var Image = require('Image');
+var React = require('React');
+var StyleSheet = require('StyleSheet');
+var View = require('View');
+
+var ImageBackground = function (_React$Component) {
+  babelHelpers.inherits(ImageBackground, _React$Component);
+
+  function ImageBackground() {
+    babelHelpers.classCallCheck(this, ImageBackground);
+    return babelHelpers.possibleConstructorReturn(this, (ImageBackground.__proto__ || Object.getPrototypeOf(ImageBackground)).apply(this, arguments));
+  }
+
+  babelHelpers.createClass(ImageBackground, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          children = _props.children,
+          style = _props.style,
+          imageStyle = _props.imageStyle,
+          imageRef = _props.imageRef,
+          props = babelHelpers.objectWithoutProperties(_props, ['children', 'style', 'imageStyle', 'imageRef']);
+
+
+      return React.createElement(
+        View,
+        { style: style, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49
+          }
+        },
+        React.createElement(Image, babelHelpers.extends({}, props, {
+          style: [StyleSheet.absoluteFill, {
+            width: style.width,
+            height: style.height
+          }, imageStyle],
+          ref: imageRef,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50
+          }
+        })),
+        children
+      );
+    }
+  }]);
+  return ImageBackground;
+}(React.Component);
+
+module.exports = ImageBackground;
