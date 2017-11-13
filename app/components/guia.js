@@ -39,17 +39,38 @@ class Guia extends Component {
         <Form>
                 <Text style = {styles.textTitle}> Guía de Usuario</Text>
                           
-                <Card title = "Busqueda Básica">
+                <Card title = "¿Como utilizar las búsquedas?">
+                <View alignItems = "center">
                 <Image
+                    alignItems="center"
                     style={styles.image}
-                    resizeMode="cover"
+                    resizeMode="stretch"
                     source={require('../resources/guia/guia_1.jpg')}
                 />
-                <Text style={{marginBottom: 10, fontSize: 14}}>
-                  Para acceder a la búsqueda básica, puedes utilizar el menú de navegación desplegable desde el boton de 
-                  las barras laterales, ubicado en la parte superior izquierda de la aplicación.
-                </Text>
+                </View>
+                <Text style={{marginBottom: 10, fontSize: 14, textAlign: 'justify'}}>
+                  {'\n'}Para acceder a los diferentes tipos de busqueda disponibles por el aplicativo, está disponible
+                  el menú lateral, el cual contiene los tipos de búsqueda básica, avanzada, por autor, y demás búsquedas
+                  según el tipo de material.
+                </Text>            
               </Card>
+              <View><Text></Text></View> 
+              <Card title = "¿Donde puedo encontrar enlaces de interes?">
+                <View alignItems = "center">
+                <Image
+                    alignItems="center"
+                    style={styles.image}
+                    resizeMode="stretch"
+                    source={require('../resources/guia/guia_2.jpg')}
+                />
+                </View>
+                <Text style={{marginBottom: 10, fontSize: 14, textAlign: 'justify'}}>
+                  {'\n'}En la sección SINBAD - Catálogo en Linea del menú, cualquier usuario puede visitar
+                  los diferentes enlaces que se disponen y buscan facilitarle al usuario cualquier acción que desee realizar
+                  y guiarlo en ciertas situaciones.
+                </Text>            
+              </Card>
+
               </Form>
         </ScrollView>
         );

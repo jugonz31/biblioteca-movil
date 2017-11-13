@@ -82,6 +82,7 @@ class Musica extends Component {
                                 this.props.iconStyle]}/>
                         }
                         options={{
+                        undefined: 'Seleccione el filtro de búsqueda',
                         todos: 'Todos',
                         director: 'Director',
                         clasificacion: 'Clasificación',
@@ -152,7 +153,7 @@ class Musica extends Component {
                                 this.props.iconStyle]}/>
                         }
                         options={{
-                        none: '...',
+                        undefined: 'Seleccione el genero',
                         todos: 'Todos',
                         blues: 'Blues',
                         contemporanea: 'Contemporánea',

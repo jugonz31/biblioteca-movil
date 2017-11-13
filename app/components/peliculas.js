@@ -83,6 +83,7 @@ class Peliculas extends Component {
                                 this.props.iconStyle]}/>
                         }
                         options={{
+                        undefined: 'Seleccione el filtro de búsqueda',
                         todos: 'Todos',
                         director: 'Director',
                         clasificacion: 'Clasificación',
@@ -108,7 +109,7 @@ class Peliculas extends Component {
                                 this.props.iconStyle]}/>
                         }
                         options={{
-                        none: '...',
+                        todos: 'Todos',
                         caleman: 'Cine Alemán',
                         cargentino: 'Cine Argentino',
                         caustraliano: 'Cine Australiano',
@@ -147,7 +148,6 @@ class Peliculas extends Component {
                                 this.props.iconStyle]}/>
                         }
                         options={{
-                        none: '...',
                         todos: 'Todos',
                         accion: 'Acción',
                         aventura: 'Aventura',

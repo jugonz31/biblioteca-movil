@@ -73,25 +73,6 @@ class Autor extends Component {
                     <Text></Text>
                     <InputField ref='busquedaAutor' placeholder='Ingrese el autor de búsqueda'/>
                     <Text></Text>
-                    <Text style = {styles.text}>Elementos por página</Text>
-                    <Text></Text>
-                    <PickerField 
-                        style = {styles.picker} 
-                        ref='busquedaAutorPicker'
-                        iconRight={
-                            <FontAwesome 
-                            name='angle-right'
-                            size={24}
-                            style={[
-                                formStyles.alignRight,{color: '#000066'},
-                                this.props.iconStyle]}/>
-                        }
-                        options={{
-                        diez: '10',
-                        cincuenta: '50',
-                        cien: '100',                   
-                    }}/> 
-                    <Text></Text>
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
 		            alignItems: 'center'}}>
                     <Button 

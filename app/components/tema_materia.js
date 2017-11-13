@@ -73,41 +73,6 @@ class Tema_Materia extends Component {
                     <Text></Text>
                     <InputField ref='busquedaTema' placeholder='Ingrese el tema de búsqueda'/>
                     <Text></Text>
-                    <Text style = {styles.text}>Elementos por página</Text>
-                    <Text></Text>
-                        <PickerField 
-                            style = {styles.picker} 
-                            ref='busquedaTemaPicker'
-                            iconRight={
-                                <FontAwesome 
-                                name='angle-right'
-                                size={24}
-                                style={[
-                                    formStyles.alignRight,{color: '#000066'},
-                                    this.props.iconStyle]}/>
-                            }
-                            options={{
-                            diez: '10',
-                            cincuenta: '50',
-                            cien: '100',                   
-                        }}/> 
-                    <Text></Text>
-                    <PickerField 
-                            style = {styles.picker} 
-                            ref='busquedaTema_MateriaPicker'
-                            iconRight={
-                                <FontAwesome 
-                                name='angle-right'
-                                size={24}
-                                style={[
-                                    formStyles.alignRight,{color: '#000066'},
-                                    this.props.iconStyle]}/>
-                            }
-                            options={{
-                            ptema: 'Parte del tema',
-                            texacto: 'Termino exacto'                  
-                        }}/> 
-                    <Text></Text>
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
 		            alignItems: 'center'}}>
                     <Button 
