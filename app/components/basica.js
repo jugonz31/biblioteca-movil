@@ -27,7 +27,7 @@ export class ChildComponent extends Component{
     if(this.props.result){
         var res = this.props.result.map((item, i) => {
            if(textPicker == "todos"){ 
-            var strt1 = item.library.toLowerCase();
+            var strt1 = item.Catálogo.toLowerCase();
             var strt2 = item.title.toLowerCase();
             var strt3 = item.creator.toLowerCase();
             var strt4 = item.publisher.toLowerCase();
@@ -41,11 +41,11 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
-                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Fecha de Publicación: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Autor(es): {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
-                <Text style={styles.textCard}>Library: EAFIT</Text>
-                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Catálogo: EAFIT</Text>
+                <Text style={styles.textCard}>Editor: {item.publisher}</Text>
                 <Text style={styles.textCard}>Tipo: {item.type}</Text>
                 <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
@@ -76,11 +76,11 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
-                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Fecha de Publicación: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Autor(es): {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
-                <Text style={styles.textCard}>Library: EAFIT</Text>
-                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Catálogo: EAFIT</Text>
+                <Text style={styles.textCard}>Editor: {item.publisher}</Text>
                 <Text style={styles.textCard}>Tipo: {item.type}</Text>
                 <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
@@ -111,11 +111,11 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
-                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Fecha de Publicación: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Autor(es): {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
-                <Text style={styles.textCard}>Library: EAFIT</Text>
-                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Catálogo: EAFIT</Text>
+                <Text style={styles.textCard}>Editor: {item.publisher}</Text>
                 <Text style={styles.textCard}>Tipo: {item.type}</Text>
                 <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
@@ -146,11 +146,11 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
-                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Fecha de Publicación: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Autor(es): {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
-                <Text style={styles.textCard}>Library: EAFIT</Text>
-                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Catálogo: EAFIT</Text>
+                <Text style={styles.textCard}>Editor: {item.publisher}</Text>
                 <Text style={styles.textCard}>Tipo: {item.type}</Text>
                 <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
@@ -181,11 +181,11 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
-                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Fecha de Publicación: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Autor(es): {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
-                <Text style={styles.textCard}>Library: EAFIT</Text>
-                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Catálogo: EAFIT</Text>
+                <Text style={styles.textCard}>Editor: {item.publisher}</Text>
                 <Text style={styles.textCard}>Tipo: {item.type}</Text>
                 <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
@@ -216,11 +216,11 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
-                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Fecha de Publicación: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Autor(es): {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
-                <Text style={styles.textCard}>Library: EAFIT</Text>
-                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Catálogo: EAFIT</Text>
+                <Text style={styles.textCard}>Editor: {item.publisher}</Text>
                 <Text style={styles.textCard}>Tipo: {item.type}</Text>
                 <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
@@ -251,11 +251,11 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
-                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Fecha de Publicación: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Autor(es): {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
-                <Text style={styles.textCard}>Library: EAFIT</Text>
-                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Catálogo: EAFIT</Text>
+                <Text style={styles.textCard}>Editor: {item.publisher}</Text>
                 <Text style={styles.textCard}>Tipo: {item.type}</Text>
                 <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
@@ -286,11 +286,11 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
-                <Text style={styles.textCard}>Creador: {item.creator}</Text>
+                <Text style={styles.textCard}>Fecha de Publicación: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Autor(es): {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
-                <Text style={styles.textCard}>Library: EAFIT</Text>
-                <Text style={styles.textCard}>Publisher: {item.publisher}</Text>
+                <Text style={styles.textCard}>Catálogo: EAFIT</Text>
+                <Text style={styles.textCard}>Editor: {item.publisher}</Text>
                 <Text style={styles.textCard}>Tipo: {item.type}</Text>
                 <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>

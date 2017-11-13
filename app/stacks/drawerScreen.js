@@ -16,6 +16,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const DrawerScreen = DrawerNavigator({
+    Guía: {screen: Guia},
     Básica: {screen: Basica},
     Avanzada: {screen: Avanzada},
     Autor: {screen: Autor},
@@ -24,8 +25,7 @@ const DrawerScreen = DrawerNavigator({
     Películas: {screen: Peliculas},
     Música: {screen: Musica},
     Tema_Materia: {screen: Tema_Materia},
-    Sinbad: {screen: Sinbad},
-    Guía: {screen: Guia}
+    Sinbad: {screen: Sinbad}
 }, {
     headerMode: 'none',
     headerStyle: {
