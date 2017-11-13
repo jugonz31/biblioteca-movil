@@ -41,7 +41,6 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>ID: {item._id}</Text>
                 <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
                 <Text style={styles.textCard}>Creador: {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
@@ -77,7 +76,6 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>ID: {item._id}</Text>
                 <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
                 <Text style={styles.textCard}>Creador: {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
@@ -113,7 +111,6 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>ID: {item._id}</Text>
                 <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
                 <Text style={styles.textCard}>Creador: {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
@@ -149,7 +146,6 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>ID: {item._id}</Text>
                 <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
                 <Text style={styles.textCard}>Creador: {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
@@ -185,7 +181,6 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>ID: {item._id}</Text>
                 <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
                 <Text style={styles.textCard}>Creador: {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
@@ -221,7 +216,6 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>ID: {item._id}</Text>
                 <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
                 <Text style={styles.textCard}>Creador: {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
@@ -257,7 +251,6 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>ID: {item._id}</Text>
                 <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
                 <Text style={styles.textCard}>Creador: {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
@@ -293,7 +286,6 @@ export class ChildComponent extends Component{
                     titleStyle={styles.textCardTitle}
                     title={item.title}
                 >
-                <Text style={styles.textCard}>ID: {item._id}</Text>
                 <Text style={styles.textCard}>Datestamp: {item.datestamp}</Text>
                 <Text style={styles.textCard}>Creador: {item.creator}</Text>
                 <Text style={styles.textCard}>Subject: {item.subject}</Text>
