@@ -1,28 +1,70 @@
 import React, { Component } from 'react';
-import {Dimensions,
-	StyleSheet,
-	View,
-	Text,
-	Image,
-	ScrollView,
-    TouchableHighlight,
-    Picker,
-	TextInput,
-    CheckBox,
-} from 'react-native';
-
+import {Dimensions, StyleSheet, View, Text, Image, ScrollView, TouchableHighlight, Picker, 
+    TextInput, CheckBox, Modal } from 'react-native';
+import {DrawerNavigator, StackNavigator} from 'react-navigation';
 import { Form,
     Separator,InputField, LinkField,
     SwitchField, PickerField,DatePickerField,TimePickerField
    } from 'react-native-form-generator';
-
 import { AppLoading, Asset, Font } from 'expo';
-import { FontAwesome } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
+import { FontAwesome, FontFamily, Entypo } from '@expo/vector-icons';
+import { Card, ListItem} from 'react-native-elements';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
+
+export class ChildComponent extends Component{
+    render(){
+    if(this.props.result){
+        var res = this.props.result.map((item, i) => {
+            var str1 = item.subject.toLowerCase();
+            if(str1.indexOf(textInput.toLowerCase()) != -1){
+                count++;
+                return(
+                <Card key = {i}
+                    titleStyle={styles.textCardTitle}
+                    title={item.title}
+                >
+                <Text style={styles.textCard}>Fecha de Publicación: {item.datestamp}</Text>
+                <Text style={styles.textCard}>Autor(es): {item.creator}</Text>
+                <Text style={styles.textCard}>Subject: {item.subject}</Text>
+                <Text style={styles.textCard}>Catálogo: EAFIT</Text>
+                <Text style={styles.textCard}>Editor: {item.publisher}</Text>
+                <Text style={styles.textCard}>Tipo: {item.type}</Text>
+                <Text style={styles.textCard}>ISBN: {item.isbn}</Text>
+                <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
+                <Text style={styles.textCard}>Idioma: {item.language}</Text>
+                <Text style={styles.textCard}>Descripción: {item.description}</Text>
+                <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
+                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
+                <View>
+                <Button 
+                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
+                        textStyle={{fontSize: 20, color: 'white'}}
+                        onPress={() => {this.handleFormChange("")}}
+                        >
+                        Registro completo
+                </Button>
+                </View>
+            </Card>  
+                )
+            }
+        })
+        }
+        return(
+                <Form>
+                    <ScrollView>
+                        <View style ={{alignItems: 'center'}}>
+                            <Text style = {styles.textTitle}> {count} documentos encontrados</Text>
+                        </View>
+                        {res}
+                    </ScrollView>
+                </Form>    
+                )
+            }
+}
 
 class Tema_Materia extends Component {
     static navigationOptions = {
@@ -36,29 +78,44 @@ class Tema_Materia extends Component {
             />
         )
       };
-      handleFormChange(formData){
-        /*
-        formData will contain all the values of the form,
-        in this example.
-     
-        formData = {
-        first_name:"",
-        last_name:"",
-        gender: '',
-        birthday: Date,
-        has_accepted_conditions: bool
-        }
-        */
-     
-        this.setState({formData:formData})
-        this.props.onFormChange && this.props.onFormChange(formData);
+
+      state = {
+        modalVisible: false,
+        data: null
       }
-      handleFormFocus(e, component){
-        //console.log(e, component); 
+
+      componentDidMount(){
+        fetch('https://raw.githubusercontent.com/jugonz31/biblioteca-movil/master/books1.json')
+        .then((response) => response.json())
+        .then((responseJson) => {
+            this.setState({
+                data: responseJson
+            })
+        })
+    }
+  
+    setModalVisible(visible) {
+      if(textInput != ""){
+          this.setState({modalVisible: visible});
+      }else{
+          this.setState({modalVisible: !visible});
+          alert("El campo está vacío.");
       }
-      openTermsAndConditionsURL(){
+    }
+    
+    handleFormChange(formData){
+   
+      this.setState({formData:formData})
+      this.props.onFormChange && this.props.onFormChange(formData);
+      textInput = String(formData.busquedaTema);
+      count = 0;
+    }
+    handleFormFocus(e, component){
      
-      }
+    }
+    openTermsAndConditionsURL(){
+   
+    }
     render() {
         return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
         <Form
@@ -72,14 +129,31 @@ class Tema_Materia extends Component {
             <Text style = {styles.text}>Ingrese el tema de búsqueda</Text>
                     <Text></Text>
                     <InputField ref='busquedaTema' placeholder='Ingrese el tema de búsqueda'/>
+                    <Modal
+                        animationType="slide"
+                        transparent={false}
+                        visible={this.state.modalVisible}
+                        onRequestClose={() => {this.setModalVisible(!this.state.modalVisible)}}
+                        >
+                        <Form>
+                         <ChildComponent 
+                         result = {this.state.data}
+                         />
+                        </Form>
+                    </Modal>
                     <Text></Text>
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
 		            alignItems: 'center'}}>
-                    <Button 
-                        style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
-                        textStyle={{fontSize: 20, color: 'white'}}>
-                        Buscar
-                    </Button>
+                    <View>
+                        <View>
+                            <Button 
+                                style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
+                                textStyle={{fontSize: 20, color: 'white'}}
+                                onPress={() => {this.setModalVisible(true)}}>
+                                Buscar
+                            </Button>
+                        </View>
+                    </View>
                     <Button 
                         style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
                         textStyle={{fontSize: 20, color: 'white'}}>
