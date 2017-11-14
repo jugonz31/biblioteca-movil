@@ -37,24 +37,10 @@ class Peliculas extends Component {
         )
       };
       handleFormChange(formData){
-        /*
-        formData will contain all the values of the form,
-        in this example.
-     
-        formData = {
-        first_name:"",
-        last_name:"",
-        gender: '',
-        birthday: Date,
-        has_accepted_conditions: bool
-        }
-        */
-     
         this.setState({formData:formData})
         this.props.onFormChange && this.props.onFormChange(formData);
       }
       handleFormFocus(e, component){
-        //console.log(e, component); 
       }
       openTermsAndConditionsURL(){
      
@@ -88,90 +74,14 @@ class Peliculas extends Component {
                         director: 'Director',
                         clasificacion: 'Clasificación',
                         tema_materia: 'Tema / Materias',
-                        titulo: 'Título'     
+                        titulo: 'Título',
+                        pais: 'País',
+                        genero: 'Género'     
                     }}/> 
                     <Text></Text>
                     <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                     <View><Text></Text></View>
                     <InputField ref=' busqueda' placeholder=' Ingrese los términos de búsqueda'/>
-                    <View><Text></Text></View>
-                    <Text style = {styles.text}>País:</Text>
-                    <Text></Text>
-                    <PickerField 
-                        style = {styles.picker} 
-                        ref='pais'
-                        iconRight={
-                            <FontAwesome 
-                            name='angle-right'
-                            size={24}
-                            style={[
-                                formStyles.alignRight,{color: '#000066'},
-                                this.props.iconStyle]}/>
-                        }
-                        options={{
-                        todos: 'Todos',
-                        caleman: 'Cine Alemán',
-                        cargentino: 'Cine Argentino',
-                        caustraliano: 'Cine Australiano',
-                        cbrasileno: 'Cine Brasileño',           
-                        ccandiense: 'Cine Canadiense',
-                        cchino: 'Cine Chino',
-                        ccolombia: 'Cine Colombia',
-                        cdanes: 'Cine Danés',
-                        cespanol: 'Cine Español',
-                        cusa: 'Cine Estadounidense',
-                        cfrances: 'Cine Frances',
-                        cholandes: 'Cine Holandes',
-                        cingles: 'Cine Inglés',
-                        cirani: 'Cine Iraní',
-                        citaliano: 'Cine Italiano',
-                        cjapones: 'Cine Japones',
-                        clatinoamericano: 'Cine Latinoamericano',
-                        cmexicano: 'Cine Mexicano',
-                        cperuano: 'Cine Peruano',
-                        cpolaco: 'Cine Polaco',
-                        cruso: 'Cine Ruso',
-                        csueco: 'Cine Sueco'        
-                    }}/> 
-                    <Text></Text>
-                    <Text style = {styles.text}>Géneros:</Text>
-                    <Text></Text>
-                    <PickerField 
-                        style = {styles.picker} 
-                        ref='genero'
-                        iconRight={
-                            <FontAwesome 
-                            name='angle-right'
-                            size={24}
-                            style={[
-                                formStyles.alignRight,{color: '#000066'},
-                                this.props.iconStyle]}/>
-                        }
-                        options={{
-                        todos: 'Todos',
-                        accion: 'Acción',
-                        aventura: 'Aventura',
-                        cienciaf: 'Ciencia ficción',
-                        comedia: 'Comedia',
-                        dibujos: 'Dibujos animados',
-                        oeste: 'Del oeste / Western',
-                        documentales: 'Documentales',
-                        drama: 'Drama',  
-                        erotico: 'Erótico',  
-                        fantastico: 'Fantástico',                      
-                        gansters: 'Gansters',  
-                        historico: 'Histórico',  
-                        infantil: 'Infantil',
-                        intriga: 'Intriga / Thriller',  
-                        mudo: 'Mudo',    
-                        musical: 'Musical',  
-                        negro: 'Negro',  
-                        politico: 'Político',  
-                        social: 'Social',  
-                        suspenso: 'Suspenso',  
-                        terror: 'Terror',  
-                        romantico: 'Romántico'
-                    }}/> 
                     <View><Text></Text></View>
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
 		            alignItems: 'center'}}>

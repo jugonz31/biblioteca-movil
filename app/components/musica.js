@@ -36,27 +36,12 @@ class Musica extends Component {
         )
       };
       handleFormChange(formData){
-        /*
-        formData will contain all the values of the form,
-        in this example.
-     
-        formData = {
-        first_name:"",
-        last_name:"",
-        gender: '',
-        birthday: Date,
-        has_accepted_conditions: bool
-        }
-        */
-     
         this.setState({formData:formData})
         this.props.onFormChange && this.props.onFormChange(formData);
       }
       handleFormFocus(e, component){
-        //console.log(e, component); 
       }
       openTermsAndConditionsURL(){
-     
       }
     render() {
         return (<ScrollView keyboardShouldPersistTaps={"always"} style={{paddingLeft:10,paddingRight:10, height:200}}>
@@ -87,87 +72,14 @@ class Musica extends Component {
                         director: 'Director',
                         clasificacion: 'Clasificación',
                         tema_materia: 'Tema / Materias',
-                        titulo: 'Título'     
+                        titulo: 'Título',
+                        pais: 'País',
+                        genero: 'Género'     
                     }}/> 
                     <Text></Text>
                     <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                     <View><Text></Text></View>
                     <InputField ref=' busqueda' placeholder=' Ingrese los términos de búsqueda'/>
-                    <View><Text></Text></View>
-                    <Text style = {styles.text}>País:</Text>
-                    <Text></Text>
-                    <PickerField 
-                        style = {styles.picker} 
-                        ref='pais'
-                        iconRight={
-                            <FontAwesome 
-                            name='angle-right'
-                            size={24}
-                            style={[
-                                formStyles.alignRight,{color: '#000066'},
-                                this.props.iconStyle]}/>
-                        }
-                        options={{
-                        todos: 'Todos',
-                        aleman: 'Alemania',
-                        argentino: 'Argentina',
-                        brasilero: 'Brasil',
-                        colombia: 'Colombia',           
-                        cuba: 'Cuba',
-                        espana: 'España',
-                        usa: 'Estados Unidos',
-                        finlandia: 'Finlandia',
-                        francia: 'Francia',
-                        guatemala: 'Guatemala',
-                        ingla: 'Inglaterra',
-                        ita: 'Italia',
-                        japon: 'Japón',
-                        mexico: 'México',
-                        panama: 'Panamá',
-                        peru: 'Perú',
-                        rusia: 'Rusia',
-                        uru: 'Uruguay',
-                        vene: 'Venezuela',
-                        musipais: '...Músicos por país...',
-                        alemanes: 'Alemanes',
-                        argentinos: 'Argentinos',
-                        chilenos: 'Chilenos',
-                        colombianos: 'Colombianos',
-                        cubanos: 'Cubanos',
-                        espanoles: 'Españoles',
-                        italianos: 'Italianos',
-
-                    }}/> 
-                    <Text></Text>
-                    <Text style = {styles.text}>Géneros:</Text>
-                    <Text></Text>
-                    <PickerField 
-                        style = {styles.picker} 
-                        ref='genero'
-                        iconRight={
-                            <FontAwesome 
-                            name='angle-right'
-                            size={24}
-                            style={[
-                                formStyles.alignRight,{color: '#000066'},
-                                this.props.iconStyle]}/>
-                        }
-                        options={{
-                        undefined: 'Seleccione el genero',
-                        todos: 'Todos',
-                        blues: 'Blues',
-                        contemporanea: 'Contemporánea',
-                        folk: 'Folk',
-                        folclorica: 'Folclórica',
-                        heavymetal: 'Heavy Metal',
-                        jazz: 'Jazz',
-                        musicaclasica: 'Música Clásica',
-                        opera: 'Opera',  
-                        pop: 'Pop',  
-                        punk: 'Punk',                      
-                        rock: 'Rock',  
-                        tango: 'Tango'
-                    }}/> 
                     <View><Text></Text></View>
                     <View style = {{flex: 2, flexDirection: 'row', paddingHorizontal: 30, justifyContent: 'space-between',
 		            alignItems: 'center'}}>

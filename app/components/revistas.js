@@ -181,9 +181,6 @@ class Revistas extends Component {
         this.props.onFormChange && this.props.onFormChange(formData);
         textInput = String(formData.busqueda);
         textPicker = formData.busquedapor;
-        titulo = formData.titulo;
-        issn = formData.issn;
-        pe = formData.pe;
         count = 0;
       }
       handleFormFocus(e, component){
