@@ -27,7 +27,7 @@ export class ChildComponent extends Component{
     if(this.props.result){
         var res = this.props.result.map((item, i) => {
            if(textPicker == "todos"){ 
-            var strt1 = item.Catálogo.toLowerCase();
+            var strt1 = item.subject.toLowerCase();
             var strt2 = item.title.toLowerCase();
             var strt3 = item.creator.toLowerCase();
             var strt4 = item.publisher.toLowerCase();
@@ -349,7 +349,7 @@ class Basica extends Component {
       }
 
       componentDidMount(){
-          fetch('https://raw.githubusercontent.com/jugonz31/biblioteca-movil/master/books1.json')
+          fetch('https://raw.githubusercontent.com/jugonz31/biblioteca-movil/master/database/books1.json')
           .then((response) => response.json())
           .then((responseJson) => {
               this.setState({
@@ -376,8 +376,6 @@ class Basica extends Component {
         this.props.onFormChange && this.props.onFormChange(formData);
         textInput = String(formData.busqueda);
         textPicker = formData.busquedapor;
-        titulo = formData.Título;
-        todos = formData.Todos;
         count = 0;
       }
       handleFormFocus(e, component){

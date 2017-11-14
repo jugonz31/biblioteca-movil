@@ -115,40 +115,6 @@
                       <View><Text></Text></View>
                       <Text style = {styles.textTitle}>Limitar material a:</Text>
                       <View><Text></Text></View>
-                      <Text style = {styles.text}>Tipo de material: </Text>
-                      <PickerField 
-                          style = {styles.picker} 
-                          ref='tipoMaterial'
-                          iconRight={
-                              <FontAwesome 
-                              name='angle-right'
-                              size={24}
-                              style={[
-                                  formStyles.alignRight,{color: '#000066'},
-                                  this.props.iconStyle]}/>
-                          }
-                          options={{
-                          undefined: 'Seleccione el tipo de material',
-                          todos : 'Todos',
-                          articulos : 'Artículos',
-                          historicos : 'Archivos/Documentos Históricos',
-                          audiovisuales : 'Audiovisuales',
-                          cds : 'CDs',
-                          catalogos : 'Catálogos',
-                          casos : 'Casos',
-                          ereader : 'E-reader',
-                          documento : 'Documentos',
-                          folletos : 'Folletos',
-                          libros : 'Libros',
-                          mapas : 'Mapas',
-                          normas : 'Normas',
-                          partituras : 'Partituras', 
-                          proyectos : 'Proyectos',
-                          referencia : 'Referencia',
-                          revistas : 'Revista',
-                          software : 'Software',
-                          tesis : 'Tesis',                     
-                      }}/> 
                       <Text style = {styles.text}>Fecha de edición:</Text>
                       <View><Text></Text></View>
                       <InputField ref='fechaEdicion' placeholder=' Ingrese la fecha de edición'/>
@@ -174,40 +140,6 @@
                           bogota : 'Bogotá',
                           pereira : 'Pereira'                     
                       }}/>
-                      <View><Text></Text></View>
-                      <Text style = {styles.text}>Idioma: </Text>
-                      <PickerField 
-                          style = {styles.picker} 
-                          ref='idioma'
-                          iconRight={
-                              <FontAwesome 
-                              name='angle-right'
-                              size={24}
-                              style={[
-                                  formStyles.alignRight,{color: '#000066'},
-                                  this.props.iconStyle]}/>
-                          }
-                          options={{
-                          undefined: 'Seleccione el idioma',
-                          espanol : 'Español',
-                          aleman : 'Alemán',
-                          catalan : 'Catalán',
-                          italiano : 'Italiano',
-                          ingles : 'Ingles',
-                          danes : 'Danés',
-                          frances : 'Francés',
-                          griego : 'Griego',
-                          japones : 'Japones',
-                          latin : 'Latín',
-                          senas : 'Leng. de señas',
-                          mandarin : 'Mandarín',
-                          multilingue : 'Multilingue',
-                          persa : 'Persa',
-                          portugues : 'Portugués',
-                          rumano : 'Rumano',
-                          ruso : 'Ruso',
-                      }}/>
-
                       <View><Text></Text></View>
                       <SwitchField 
                       label={textBox}
