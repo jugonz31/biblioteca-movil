@@ -15,12 +15,13 @@ import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
 
   var color = 'white';
+  var textInput1 = "";
 
   export class ChildComponent extends Component{
     render(){
     if(this.props.result){
         var res = this.props.result.map((item, i) => {
-            if(textPicker1 == undefined && textInput1 == undefined){
+            if(textPicker1 == "nodefinido1" && textInput1 == ""){
                 if(textPicker == "todos"){ 
                     var strt1 = item.subject.toLowerCase();
                     var strt2 = item.title.toLowerCase();
@@ -50,13 +51,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
-                        <Button 
-                                style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                                textStyle={{fontSize: 20, color: 'white'}}
-                                onPress={() => {this.setModalVisible1(true)}}
-                                >
-                                Registro completo
-                        </Button>
                         </View>
                     </Card>  
                         )
@@ -84,13 +78,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
-                        <Button 
-                                style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                                textStyle={{fontSize: 20, color: 'white'}}
-                                onPress={() => {this.handleFormChange("")}}
-                                >
-                                Registro completo
-                        </Button>
                         </View>
                     </Card>  
                         )
@@ -119,13 +106,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
-                        <Button 
-                                style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                                textStyle={{fontSize: 20, color: 'white'}}
-                                onPress={() => {this.handleFormChange("")}}
-                                >
-                                Registro completo
-                        </Button>
                         </View>
                     </Card>  
                         )
@@ -154,13 +134,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
-                        <Button 
-                                style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                                textStyle={{fontSize: 20, color: 'white'}}
-                                onPress={() => {this.handleFormChange("")}}
-                                >
-                                Registro completo
-                        </Button>
                         </View>
                     </Card>  
                         )
@@ -189,13 +162,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
-                        <Button 
-                                style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                                textStyle={{fontSize: 20, color: 'white'}}
-                                onPress={() => {this.handleFormChange("")}}
-                                >
-                                Registro completo
-                        </Button>
                         </View>
                     </Card>  
                         )
@@ -224,13 +190,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
-                        <Button 
-                                style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                                textStyle={{fontSize: 20, color: 'white'}}
-                                onPress={() => {this.handleFormChange("")}}
-                                >
-                                Registro completo
-                        </Button>
                         </View>
                     </Card>  
                         )
@@ -259,13 +218,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
-                        <Button 
-                                style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                                textStyle={{fontSize: 20, color: 'white'}}
-                                onPress={() => {this.handleFormChange("")}}
-                                >
-                                Registro completo
-                        </Button>
                         </View>
                     </Card>  
                         )
@@ -294,13 +246,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
-                        <Button 
-                                style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                                textStyle={{fontSize: 20, color: 'white'}}
-                                onPress={() => {this.handleFormChange("")}}
-                                >
-                                Registro completo
-                        </Button>
                         </View>
                     </Card>  
                         )
@@ -338,13 +283,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
-                        <Button 
-                                style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                                textStyle={{fontSize: 20, color: 'white'}}
-                                onPress={() => {this.setModalVisible1(true)}}
-                                >
-                                Registro completo
-                        </Button>
                         </View>
                     </Card>  
                         )
@@ -354,7 +292,6 @@ import Button from 'apsl-react-native-button';
             
 
         })
-        //count = 0;
         }
         return(
                 <Form>
@@ -408,9 +345,9 @@ import Button from 'apsl-react-native-button';
          
             this.setState({formData:formData})
             this.props.onFormChange && this.props.onFormChange(formData);
-            textInput = String(formData.busqueda);
+            textInput = String(formData.busquedaUno);
             textInput1 = String(formData.fechaEdicion);
-            textPicker = formData.busquedapor;
+            textPicker = formData.busquedaporUno;
             textPicker1 = formData.ubicacion;
             count = 0;
           }
@@ -445,7 +382,7 @@ import Button from 'apsl-react-native-button';
                                   this.props.iconStyle]}/>
                           }
                           options={{
-                          undefined: 'Seleccione el filtro de búsqueda',
+                          nodefinido: 'Seleccione el filtro de búsqueda',
                           todos: 'Todos',
                           autor: 'Autor',
                           isbn: 'ISBN / ISSN',
@@ -510,7 +447,7 @@ import Button from 'apsl-react-native-button';
                                   this.props.iconStyle]}/>
                           }
                           options={{
-                          undefined: 'Seleccione la ubicación',
+                          nodefinido1: 'Seleccione la ubicación',
                           todas : 'Todas',
                           medellin : 'Medellín',
                           salapatrimonial : 'Medellín - Sala Patrimonial',

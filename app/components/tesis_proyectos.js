@@ -43,13 +43,6 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
-                    <Button 
-                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                        textStyle={{fontSize: 20, color: 'white'}}
-                        onPress={() => {this.setModalVisible1(true)}}
-                        >
-                        Registro completo
-                    </Button>
                     </View>
                     </Card> 
                 )
@@ -77,13 +70,6 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
-                    <Button 
-                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                        textStyle={{fontSize: 20, color: 'white'}}
-                        onPress={() => {this.setModalVisible1(true)}}
-                        >
-                        Registro completo
-                    </Button>
                     </View>
                     </Card> 
                 )
@@ -111,13 +97,6 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
-                    <Button 
-                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                        textStyle={{fontSize: 20, color: 'white'}}
-                        onPress={() => {this.setModalVisible1(true)}}
-                        >
-                        Registro completo
-                    </Button>
                     </View>
                     </Card> 
                 )
@@ -145,13 +124,6 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
-                    <Button 
-                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                        textStyle={{fontSize: 20, color: 'white'}}
-                        onPress={() => {this.setModalVisible1(true)}}
-                        >
-                        Registro completo
-                    </Button>
                     </View>
                     </Card> 
                 )
@@ -179,13 +151,6 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
-                    <Button 
-                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                        textStyle={{fontSize: 20, color: 'white'}}
-                        onPress={() => {this.setModalVisible1(true)}}
-                        >
-                        Registro completo
-                    </Button>
                     </View>
                     </Card> 
                 )
@@ -213,13 +178,6 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
-                    <Button 
-                        style={{flex: 1,flexDirection: 'row', backgroundColor: '#000066', width: 200, height: 32, alignItems: 'center'}} 
-                        textStyle={{fontSize: 20, color: 'white'}}
-                        onPress={() => {this.setModalVisible1(true)}}
-                        >
-                        Registro completo
-                    </Button>
                     </View>
                     </Card> 
                 )
