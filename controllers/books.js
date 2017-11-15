@@ -5,17 +5,8 @@ var Book = mongoose.model('Book');
 exports.findAll = function(req, res) {
  Book.find(function(err, books) {
  if(err) res.send(500, err.message);
- console.log('GET /books1')
+ console.log('GET /books2')
  res.status(200).jsonp(books);
- });
-};
-
-//GET - Return a register with specified ID
-exports.findById = function(req, res) {
- Book.findById(req.params.id, function(err, book) {
- if(err) return res.send(500, err.message);
- console.log('GET /books1/' + req.params.id);
- res.status(200).jsonp(book);
  });
 };
 

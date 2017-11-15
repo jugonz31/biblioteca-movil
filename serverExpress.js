@@ -35,7 +35,7 @@ app.use(router);
 
 var api = express.Router();
 
-api.route('/books1')
+api.route('/books2')
   .get(Book.findAll)
   .post(Book.add)
 
