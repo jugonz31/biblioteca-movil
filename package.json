@@ -10,9 +10,9 @@
     "jest-expo": "~20.0.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": "serverExpress.js",
   "scripts": {
-    "start": "react-native-scripts start",
+    "start": "node serverExpress.js",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
