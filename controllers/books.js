@@ -5,7 +5,7 @@ var Book = mongoose.model('Book');
 exports.findAll = function(req, res) {
  Book.find(function(err, books) {
  if(err) res.send(500, err.message);
- console.log('GET /books')
+ console.log('GET /books1')
  res.status(200).jsonp(books);
  });
 };
@@ -14,7 +14,7 @@ exports.findAll = function(req, res) {
 exports.findById = function(req, res) {
  Book.findById(req.params.id, function(err, book) {
  if(err) return res.send(500, err.message);
- console.log('GET /books/' + req.params.id);
+ console.log('GET /books1/' + req.params.id);
  res.status(200).jsonp(book);
  });
 };
@@ -25,54 +25,26 @@ exports.add = function(req, res) {
  console.log(req.body);
  var book = new Book({
     datestamp: req.body.datestamp,
+    fechaMod: req.body.fechaMod,
+    title: req.body.title,
     creator: req.body.creator,
     subject: req.body.subject,
-    library: req.body.library,
-    creator: req.body.creator,
     publisher: req.body.publisher,
     type: req.body.type,
     isbn: req.body.isbn,
     clasification: req.body.clasification,
+    espBlanco: req.body.espBlanco,
+    language: req.body.language,
     description: req.body.description,
-    mat_codigo: req.body.mat_codigo,
+    tableOfContents: req.body.tableOfContents,
+    espBlanco2: req.body.espBlanco2,
+    description2: req.body.description2,
+    matcodigo: req.body.matcodigo,
     idregistro: req.body.idregistro,
     coverage: req.body.coverage
  });
  book.save(function(err, book) {
  if(err) return res.send(500, err.message);
  res.status(200).jsonp(book);
- });
-};
-
-//PUT - Update a register already exists
-exports.update = function(req, res) {
- Book.findById(req.params.id, function(err, book) {
- book.datestamp = req.body.datestamp;
- book.creator = req.body.creator;
- book.subject = req.body.subject;
- book.library = req.body.library;
- creator = req.body.creator;
- publisher = req.body.publisher;
- type = req.body.type;
- isbn = req.body.isbn;
- clasification = req.body.clasification;
- description = req.body.description;
- mat_codigo = req.body.mat_codigo;
- idregistro = req.body.idregistro;
- coverage = req.body.coverage;
- book.save(function(err) {
- if(err) return res.send(500, err.message);
- res.status(200).jsonp(book);
- });
- });
-};
-
-//DELETE - Delete a register with specified ID
-exports.delete = function(req, res) {
- Book.findById(req.params.id, function(err, book) {
- book.remove(function(err) {
- if(err) return res.send(500, err.message);
- res.json({ message: 'Book successfully deleted' });
- });
  });
 };

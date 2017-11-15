@@ -26,7 +26,7 @@ var Book = require('./controllers/books');
 var router = express.Router();
 // Index - Route
 app.get('/', function(req, res) { 
- res.send("Biblioteca Móvil EAFIT - Proyecto Integrador 1");
+ res.send("Biblioteca Móvil EAFIT - Proyecto Integrador 1 R");
 });
 
 app.use(router);
@@ -35,14 +35,12 @@ app.use(router);
 
 var api = express.Router();
 
-api.route('/books')
+api.route('/books1')
   .get(Book.findAll)
   .post(Book.add)
 
-api.route('/books/:id')
+api.route('/books1/:id')
   .get(Book.findById)
-  .put(Book.update)
-  .delete(Book.delete)
 
 app.use('/eafit', api);
 
