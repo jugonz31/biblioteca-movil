@@ -15,7 +15,12 @@ import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
 
   var color = 'white';
+  var textPicker = "";
+  var textPicker1 = "";
   var textInput1 = "";
+  var textInput = "";
+  var textInputClean = "";
+  var count = 0;
 
   export class ChildComponent extends Component{
     render(){
@@ -47,8 +52,6 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -75,7 +78,7 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
                         <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
                         </View>
@@ -103,7 +106,7 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
                         <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
                         </View>
@@ -131,7 +134,7 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
                         <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
                         </View>
@@ -159,7 +162,7 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
                         <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
                         </View>
@@ -187,7 +190,7 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
                         <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
                         </View>
@@ -215,7 +218,7 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
                         <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
                         </View>
@@ -243,7 +246,7 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
                         <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View>
                         </View>
@@ -279,8 +282,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -318,8 +321,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -357,8 +360,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -396,8 +399,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -435,8 +438,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -474,8 +477,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -509,8 +512,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -548,8 +551,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -587,8 +590,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -626,8 +629,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -665,8 +668,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -704,8 +707,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -739,8 +742,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -778,8 +781,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -817,8 +820,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -856,8 +859,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -895,8 +898,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -934,8 +937,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -969,8 +972,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1008,8 +1011,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1047,8 +1050,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1086,8 +1089,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1125,8 +1128,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1164,8 +1167,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1199,8 +1202,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1238,8 +1241,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1277,8 +1280,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1316,8 +1319,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1355,8 +1358,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1394,8 +1397,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1429,8 +1432,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1468,8 +1471,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1507,8 +1510,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1546,8 +1549,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1585,8 +1588,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1624,8 +1627,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1659,8 +1662,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1698,8 +1701,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1737,8 +1740,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1776,8 +1779,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1815,8 +1818,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1854,8 +1857,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1889,8 +1892,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -1928,7 +1931,7 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
+                        
                         <Text style={styles.textCard}>ID Registo: {item.idregistro}</Text>
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
@@ -1967,8 +1970,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -2006,8 +2009,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -2045,8 +2048,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -2084,8 +2087,8 @@ import Button from 'apsl-react-native-button';
                         <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                         <Text style={styles.textCard}>Idioma: {item.language}</Text>
                         <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                        <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                        <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                        
+                        
                         <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                         <View style ={{alignItems: 'center'}}>
                         </View>
@@ -2138,7 +2141,10 @@ import Button from 'apsl-react-native-button';
           }
         
           setModalVisible(visible) {
-             if(textInput != ""){
+            if(textPicker == undefined){
+                alert("Seleccione un filtro de búsqueda");
+            }
+            else if(textInput != ""){
                 this.setState({modalVisible: visible});
             }else{
                 this.setState({modalVisible: !visible});

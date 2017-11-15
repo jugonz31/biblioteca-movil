@@ -14,6 +14,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
 
+var textPicker = "";
+var textInput = "";
+var textInputClean = "";
+var count = 0;
+
 export class ChildComponent extends Component{
     render(){
     if(this.props.result){
@@ -36,8 +41,6 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                 <Text style={styles.textCard}>Idioma: {item.language}</Text>
                 <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                 <View>
                 </View>

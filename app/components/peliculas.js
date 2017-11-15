@@ -15,6 +15,10 @@ import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
 
 var color = 'white';
+var textPicker = "";
+var textInput = "";
+var textInputClean = "";
+var count = 0;
 
 export class ChildComponent extends Component{
     render(){

@@ -15,6 +15,10 @@ import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
 
 var color = 'white';
+var textPicker = "";
+var textInput = "";
+var textInputClean = "";
+var count = 0;
 
 export class ChildComponent extends Component{
     render(){
@@ -39,8 +43,6 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                     <Text style={styles.textCard}>Idioma: {item.language}</Text>
                     <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                    <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                    <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
                     </View>
@@ -66,8 +68,8 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                     <Text style={styles.textCard}>Idioma: {item.language}</Text>
                     <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                    <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                    <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                    
+                    
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
                     </View>
@@ -93,8 +95,8 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                     <Text style={styles.textCard}>Idioma: {item.language}</Text>
                     <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                    <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                    <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                    
+                    
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
                     </View>
@@ -120,8 +122,8 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                     <Text style={styles.textCard}>Idioma: {item.language}</Text>
                     <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                    <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                    <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                    
+                    
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
                     </View>
@@ -147,8 +149,8 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                     <Text style={styles.textCard}>Idioma: {item.language}</Text>
                     <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                    <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                    <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                    
+                    
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
                     </View>
@@ -174,8 +176,8 @@ export class ChildComponent extends Component{
                     <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                     <Text style={styles.textCard}>Idioma: {item.language}</Text>
                     <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                    <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                    <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
+                    
+                    
                     <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                     <View style ={{alignItems: 'center'}}>
                     </View>

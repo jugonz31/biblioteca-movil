@@ -18,8 +18,6 @@ var color = 'white';
 var textPicker = "";
 var textInput = "";
 var textInputClean = "";
-var titulo = "";
-var todos = "";
 var count = 0;
 
 export class ChildComponent extends Component{
@@ -51,8 +49,6 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                 <Text style={styles.textCard}>Idioma: {item.language}</Text>
                 <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                <Text style={styles.textCard}>Código Material: {item.matcodigo}</Text>
-                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                 <View style ={{alignItems: 'center'}}>
                 </View>
@@ -79,8 +75,6 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                 <Text style={styles.textCard}>Idioma: {item.language}</Text>
                 <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                 <View>
                 </View>
@@ -107,8 +101,6 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                 <Text style={styles.textCard}>Idioma: {item.language}</Text>
                 <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                 <View>
                 </View>
@@ -135,8 +127,6 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                 <Text style={styles.textCard}>Idioma: {item.language}</Text>
                 <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                 <View>
                 </View>
@@ -163,8 +153,6 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                 <Text style={styles.textCard}>Idioma: {item.language}</Text>
                 <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                 <View>
                 </View>
@@ -191,8 +179,6 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                 <Text style={styles.textCard}>Idioma: {item.language}</Text>
                 <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                 <View>
                 </View>
@@ -219,8 +205,6 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                 <Text style={styles.textCard}>Idioma: {item.language}</Text>
                 <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                 <View>
                 </View>
@@ -247,8 +231,6 @@ export class ChildComponent extends Component{
                 <Text style={styles.textCard}>Clasificación: {item.clasification}</Text>
                 <Text style={styles.textCard}>Idioma: {item.language}</Text>
                 <Text style={styles.textCard}>Descripción: {item.description}</Text>
-                <Text style={styles.textCard}>Código Material: {item.mat_codigo}</Text>
-                <Text style={styles.textCard}>ID Registro: {item.idregistro}</Text>
                 <Text style={styles.textCard}>Ubicación: {item.coverage}</Text>
                 <View>
                 </View>

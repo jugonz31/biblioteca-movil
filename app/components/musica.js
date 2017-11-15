@@ -15,6 +15,10 @@ import Icon1 from 'react-native-vector-icons/Ionicons';
 import Button from 'apsl-react-native-button';
 
 var color = 'white';
+var textPicker = "";
+var textInput = "";
+var textInputClean = "";
+var count = 0;
 
 export class ChildComponent extends Component{
     render(){
@@ -306,7 +310,7 @@ class Musica extends Component {
                     <Text></Text>
                     <Text style = {styles.text}>Ingrese los términos de búsqueda:</Text>
                     <View><Text></Text></View>
-                    <InputField ref=' busqueda' placeholder=' Ingrese los términos de búsqueda'/>
+                    <InputField ref='busqueda' placeholder=' Ingrese los términos de búsqueda'/>
                     <Modal
                         animationType="slide"
                         transparent={false}
@@ -324,11 +328,12 @@ class Musica extends Component {
 		            alignItems: 'center'}}>
                     <View>
                         <View>
-                    <Button 
-                        style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
-                        textStyle={{fontSize: 20, color: 'white'}}>
-                        Buscar
-                    </Button>
+                        <Button 
+                            style={{flexDirection: 'row', backgroundColor: '#000066', width: 130, height: 32}} 
+                            textStyle={{fontSize: 20, color: 'white'}}
+                            onPress={() => {this.setModalVisible(true)}}>
+                            Buscar
+                        </Button>
                     </View>
                     </View>
                     <Button 
