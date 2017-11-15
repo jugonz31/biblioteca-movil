@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var bookSchema = new Schema({ 
+    _id: {type: String },
     datestamp: { type: String },
     fechaMod: { type: String },
     title: { type: String },

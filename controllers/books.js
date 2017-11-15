@@ -15,6 +15,7 @@ exports.add = function(req, res) {
  console.log('POST');
  console.log(req.body);
  var book = new Book({
+    _id: req.body._id,
     datestamp: req.body.datestamp,
     fechaMod: req.body.fechaMod,
     title: req.body.title,
