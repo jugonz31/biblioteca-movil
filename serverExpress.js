@@ -26,7 +26,7 @@ var Book = require('./controllers/books');
 var router = express.Router();
 // Index - Route
 app.get('/', function(req, res) { 
- res.send("Biblioteca Móvil EAFIT - Proyecto Integrador 1 (El Mago)");
+ res.send("Biblioteca Móvil EAFIT - Proyecto Integrador 1");
 });
 
 app.use(router);
