@@ -5,7 +5,7 @@ var Book = mongoose.model('Book');
 exports.findAll = function(req, res) {
  Book.find(function(err, books) {
  if(err) res.send(500, err.message);
- console.log('GET /books3')
+ console.log('GET /books')
  res.status(200).jsonp(books);
  });
 };
