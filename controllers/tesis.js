@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
-var Tesis = mongoose.model('Tesis');
+var Tesi = mongoose.model('Tesi');
 
 //GET - Return all registers
 exports.findAll = function(req, res) {
- Tesis.find(function(err, tesis) {
+ Tesi.find(function(err, tesis) {
  if(err) res.send(500, err.message);
  console.log('GET /tesis')
  res.status(200).jsonp(tesis);
@@ -14,7 +14,7 @@ exports.findAll = function(req, res) {
 exports.add = function(req, res) {
  console.log('POST');
  console.log(req.body);
- var tesis = new Tesis({
+ var tesis = new Tesi({
     _id: req.body._id,
     datestamp: req.body.datestamp,
     fechaMod: req.body.fechaMod,

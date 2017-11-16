@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var tesisSchema = new Schema({ 
+var tesiSchema = new Schema({ 
     _id: {type: String },
     datestamp: { type: String },
     fechaMod: { type: String },
@@ -22,4 +22,4 @@ var tesisSchema = new Schema({
     coverage: { type: String }
 });
 
-module.exports = mongoose.model('Tesis', tesisSchema);
+module.exports = mongoose.model('Tesi', tesiSchema);
