@@ -275,7 +275,7 @@ class Basica extends Component {
       }
 
       componentDidMount(){
-          fetch('https://raw.githubusercontent.com/jugonz31/biblioteca-movil/master/database/books1.json')
+          fetch('https://biblioteca-eafit.herokuapp.com/eafit/libros')
           .then((response) => response.json())
           .then((responseJson) => {
               this.setState({

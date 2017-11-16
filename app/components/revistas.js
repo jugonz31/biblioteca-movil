@@ -135,7 +135,7 @@ class Revistas extends Component {
       }
 
       componentDidMount(){
-          fetch('https://raw.githubusercontent.com/jugonz31/biblioteca-movil/master/database/titulosRevistas1.json')
+          fetch('https://biblioteca-eafit.herokuapp.com/eafit/revistas')
           .then((response) => response.json())
           .then((responseJson) => {
               this.setState({

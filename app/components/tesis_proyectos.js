@@ -217,7 +217,7 @@ class Tesis_Proyectos extends Component {
       }
 
       componentDidMount(){
-          fetch('https://raw.githubusercontent.com/jugonz31/biblioteca-movil/master/database/tesisGrado1.json')
+          fetch('https://biblioteca-eafit.herokuapp.com/eafit/tesis')
           .then((response) => response.json())
           .then((responseJson) => {
               this.setState({

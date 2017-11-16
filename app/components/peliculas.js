@@ -239,7 +239,7 @@ class Peliculas extends Component {
       }
 
       componentDidMount(){
-          fetch('https://raw.githubusercontent.com/jugonz31/biblioteca-movil/master/database/videos1.json')
+          fetch('https://biblioteca-eafit.herokuapp.com/eafit/videos')
           .then((response) => response.json())
           .then((responseJson) => {
               this.setState({
