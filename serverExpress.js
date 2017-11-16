@@ -21,7 +21,11 @@ app.use(express.static(__dirname + '/public'));
 
 // Importar modelos y controladores
 var models = require('./models/book')(app, db);
+var models1 = require('./models/partitura')(app, db);
+var models2 = require('./models/tesis')(app, db);
 var Book = require('./controllers/books');
+var Partitura = require('./controllers/partituras');
+var Tesis = require('./controllers/tesis');
 
 var router = express.Router();
 // Index - Route
@@ -36,12 +40,12 @@ app.use(router);
 var api = express.Router();
 
 api.route('/partituras')
-.get(Partitura.findAll)
-.post(Partitura.add)
+  .get(Partitura.findAll)
+  .post(Partitura.add)
 
 api.route('/tesis')
-.get(Tesis.findAll)
-.post(Tesis.add)
+  .get(Tesis.findAll)
+  .post(Tesis.add)
 
 api.route('/books')
   .get(Book.findAll)
